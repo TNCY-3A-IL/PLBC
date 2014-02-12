@@ -16,7 +16,10 @@ public class Parser {
 
 		BufferedReader reader = new BufferedReader(in);
 		BufferedWriter writter = new BufferedWriter(out);
-
+		
+		String outLine = "PREFIX dr: http://telecomnancy.eu/drug/"+"\n"+
+						"PREFIX di: http://telecomnancy.eu/disease/"+"\n"+
+						"PREFIX se: http://telecomnancy.eu/sider2/"+"\n";
 		String line = "";
 		int i=0;
 		DrugNameToCui drugNameCui = new DrugNameToCui();
@@ -25,7 +28,6 @@ public class Parser {
 		while(line!=null){
 			i++;
 			System.out.println("i : "+i);
-			String outLine ="";
 			line=reader.readLine();
 			if(line!=null){
 				String[] tabLine= new String[10];
