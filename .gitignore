@@ -2,3 +2,4 @@
 /OMIM/OMIMParser/build/
 /OMIM/OMIMParser/dist/
 *.class
+*.jar
