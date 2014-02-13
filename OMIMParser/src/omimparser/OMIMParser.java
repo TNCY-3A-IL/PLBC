@@ -37,6 +37,9 @@ public class OMIMParser {
         genes = new ConcurrentSkipListSet<>(String.CASE_INSENSITIVE_ORDER);
         diseases = new ConcurrentSkipListSet<>(String.CASE_INSENSITIVE_ORDER);
         //mim2gene = new FileInputStream("indexOnUmlsOmim");
+        //mim2gene = new FileInputStream("mim2gene.txt");
+		//new BufferedReader(new InputStreamReader(mim2gene)),new OutputStreamWriter(out));
+		
         switch (type) {
             case GENEMAP1:
                 diseaseColNbr = 13;
@@ -134,6 +137,24 @@ public class OMIMParser {
         }
         writer.close();
         System.out.println(err + " error(s) over " + total);
+    }
+	
+	    public static void GeneSymbolToID(BufferedReader in, OutputStreamWriter out) throws IOException{
+    	String line;
+    	String tmpLine[];
+		line = in.readLine();
+		Triplet t = new Triplet();
+		while(line != null){
+	    	tmpLine=line.split("	");
+	    	if (!tmpLine[3].equals("-")) {
+	            t.setObject("ge:" + tmpLine[2]);
+	            t.setProperty("ge:hasNcbiId");
+	            t.setSubject("\"" + tmpLine[3]+"\"");
+                out.write(t + "\n");
+	    	}
+	    	line = in.readLine();
+	    }
+ 	
     }
 
 }
