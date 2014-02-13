@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;tncy.plbc.SimpleLucenSearch.java&apos; to &apos;SimpleLuceneSearch.java&apos;&#x0A;- Original project: &apos;MapToId&apos;&#x0A;- Original element: &apos;tncy.plbc.SimpleLucenSearch.java&apos;&#x0A;- Renamed element: &apos;tncy.plbc.SimpleLuceneSearch.java&apos;" description="Rename compilation unit &apos;SimpleLucenSearch.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;tncy.plbc{SimpleLucenSearch.java" name="SimpleLuceneSearch.java" references="false" stamp="1392214834860" version="1.0"/>
+</session>
