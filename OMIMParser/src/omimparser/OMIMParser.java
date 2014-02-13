@@ -37,6 +37,7 @@ public class OMIMParser {
         genes = new ConcurrentSkipListSet<>(String.CASE_INSENSITIVE_ORDER);
         diseases = new ConcurrentSkipListSet<>(String.CASE_INSENSITIVE_ORDER);
         mim2gene = new BufferedReader(new InputStreamReader(new FileInputStream("mim2gene.txt")));
+		initGenes(mim2gene);
 		
         switch (type) {
             case GENEMAP1:
@@ -134,23 +135,37 @@ public class OMIMParser {
             line = reader.readLine();
         }
         writer.close();
+        reader.close();
         System.out.println(err + " error(s) over " + total);
     }
 	
-	    public String GeneSymbolToID(String geneSymbol) throws IOException{
+
+
+        
+    private void initGenes(BufferedReader in) throws IOException {
     	String line;
-    	String tmpLine[];
-		line = mim2gene.readLine();
+    	String[] tmpLine;
+		
+			line = in.readLine();		
 		while(line != null){
 	    	tmpLine=line.split("	");
-	    	if (!tmpLine[3].equals("-")) {/*
-	            t.setObject("ge:" + tmpLine[2]);
-	            t.setProperty("ge:hasNcbiId");
-	            t.setSubject("\"" + tmpLine[3]+"\"");*/
+	    	if (!tmpLine[3].equals("-")) {
+	    		genes.add(tmpLine[3]+" "+tmpLine[2]);
 	    	}
-	    	line = mim2gene.readLine();
+	    	line = in.readLine();
 	    }
- 	return null;
+		in.close();		
     }
-
+    
+    
+    public String GeneSymbolToID(String symbol) throws IOException{
+    	String gene = genes.tailSet(symbol).first();
+    	String[] tmp= gene.split(" ");
+    	if(symbol.equals(tmp[0])){
+    		return tmp[1];
+    	}
+    	return null;
+    	
+    }
+    
 }
