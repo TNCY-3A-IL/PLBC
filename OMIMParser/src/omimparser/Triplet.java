@@ -53,6 +53,6 @@ public class Triplet {
     
     @Override
     public String toString(){
-        return object + " " + property + " " + subject + ".";
+        return object + " " + property + " " + subject + " .";
     }
 }

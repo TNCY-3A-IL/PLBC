@@ -1,5 +1,6 @@
-/OMIM/OMIMParser/nbproject/
-/OMIM/OMIMParser/build/
-/OMIM/OMIMParser/dist/
+/OMIMParser/nbproject/
+/OMIMParser/nbproject/private/
+/OMIMParser/build/
+/OMIMParser/dist/
 *.class
 *.jar

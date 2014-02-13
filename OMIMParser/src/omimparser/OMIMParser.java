@@ -1,9 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * To change this license header, choose License Headers reader Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template reader the editor.
  */
-
 package omimparser;
 
 import java.io.BufferedReader;
@@ -12,68 +11,110 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import org.apache.lucene.queryParser.ParseException;
+
 /**
  *
  * @author Fabien
  */
 public class OMIMParser {
 
+    private SimpleLuceneSearch lucene;
+    private FileInputStream in;
+    private FileOutputStream out;
+    private int disease, diseaseCount;
+    private FileInputStream mim2gene;
+
+    public static final int GENEMAP1 = 1;
+    public static final int GENEMAP2 = 2;
+
+    public OMIMParser(String index, String in, String out, int type) throws Exception {
+        lucene = new SimpleLuceneSearch(index);
+        this.in = new FileInputStream(in);
+        this.out = new FileOutputStream(out);
+        //mim2gene = new FileInputStream("indexOnUmlsOmim");
+        switch (type) {
+            case GENEMAP1:
+                disease = 13;
+                diseaseCount = 3;
+                break;
+            case GENEMAP2:
+                disease = 11;
+                diseaseCount = 1;
+                break;
+
+        }
+    }
+
     /**
-     * @param args the command line arguments
+     * @param args the command lreadere arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        try{
-        FileInputStream in = new FileInputStream("C:\\Users\\Fabien\\Downloads\\genemap");
-        FileOutputStream out = new FileOutputStream("C:\\Users\\Fabien\\Downloads\\out.txt");
-        
-            toRDFFile(new BufferedReader(new InputStreamReader(in)), new OutputStreamWriter(out));
-        }catch(IOException e){
-            
+        try {
+            OMIMParser parser;
+            parser = new OMIMParser(args[0], args[1], args[2], Integer.parseInt(args[3]));
+            parser.toRDFFile();
+        } catch (Exception e) {
+            System.err.println(e);
         }
-        
+
     }
-    
-    public static String getField(String line, int i){
+
+    public String getField(String line, int i) {
         int j = 0, k = 0;
-        while(j != i){
-            if(line.charAt(k) == '|')
+        while (j != i) {
+            if (line.charAt(k) == '|') {
                 j++;
+            }
             k++;
         }
         j = k;
-        while(k < line.length() && line.charAt(k) != '|'){
+        while (k < line.length() && line.charAt(k) != '|') {
             k++;
         }
         return line.substring(j, k);
     }
-    
-    public static void toRDFFile(BufferedReader in,OutputStreamWriter out) throws IOException{
-        String line = in.readLine();
+
+    public void toRDFFile() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(this.in));
+        OutputStreamWriter writer = new OutputStreamWriter(this.out);
+        String line = reader.readLine();
         Triplet t = new Triplet();
-        out.write("PREFIX di: http://telecomnancy.eu/disease/\n");
-        out.write("PREFIX ge: http://telecomnancy.eu/gene/\n");
-        out.write("PREFIX omim: http://telecomnancy.eu/omim/\n");
+        writer.write("@prefix <di: http://telecomnancy.eu/disease/> .\r\n");
+        writer.write("@prefix <ge: http://telecomnancy.eu/gene/> .\r\n");
+        writer.write("@prefix <omim: http://telecomnancy.eu/omim/> .\r\n");
         String[] data;
         String tmp;
-        while(line != null){
-            t.setObject("ge:" + getField(line,5).split(",")[0]);
+        int err = 0, total = 0;
+        while (line != null) {
+            t.setObject("ge:" + getField(line, 5).split(",")[0]);
             t.setProperty("omim:involvedInMechanismOf");
-            tmp = getField(line,13) + getField(line,14) + getField(line,15);
+            tmp = "";
+            for (int i = 0; i < diseaseCount; i++) {
+                tmp += getField(line, disease + i);
+            }
             data = tmp.split(";");
+            String id;
             for (String data1 : data) {
                 try {
-                    data1 = data1.replaceAll(".*, ?([0-9]+) ?\\([0-9]+\\)","$1");
-                    t.setSubject("di:" + Integer.parseInt(data1));
-                    out.write(t + "\n");
-                }catch(Exception e){
-                    
+                    data1 = data1.replaceAll(".*, ?([0-9]+) ?\\([0-9]+\\)", "$1");
+                    total ++;
+                    id = lucene.getCuidFromMimId(data1);
+                    if (id != null && !id.equals("")) {
+                        t.setSubject("di:" + id);
+                        writer.write(t + "\r\n");
+                    }else{
+                        err ++;
+                    }
+                } catch (ParseException e) {
+                    err ++;
                 }
-                
             }
-            line = in.readLine();
+            line = reader.readLine();
         }
-        out.close();
+        writer.close();
+        System.out.println(err + " error(s) over " + total);
     }
-    
+
 }
