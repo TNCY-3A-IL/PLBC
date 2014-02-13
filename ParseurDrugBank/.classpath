@@ -5,5 +5,9 @@
 	<classpathentry kind="lib" path="/Users/charlesbessonnet/Desktop/projet PLBC/jdom-2/jdom-2.0.5.jar"/>
 	<classpathentry kind="lib" path="/Users/charlesbessonnet/Desktop/projet PLBC/jdom-2/jdom-2.0.5-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/charlesbessonnet/Desktop/projet PLBC/projet_2014/workspace/lib/lucene-core-3.5.0.jar"/>
+	<classpathentry kind="lib" path="/Users/charlesbessonnet/Desktop/PLBC/ParseurDrugBank/lib/jdom-2/jdom-2.0.5-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/charlesbessonnet/Desktop/PLBC/ParseurDrugBank/lib/jdom-2/jdom-2.0.5.jar"/>
+	<classpathentry kind="lib" path="/Users/charlesbessonnet/Desktop/PLBC/ParseurDrugBank/lib/projet_2014/workspace/lib/lucene-core-3.5.0.jar"/>
+	<classpathentry kind="lib" path="/Users/charlesbessonnet/Desktop/PLBC/ParseurDrugBank/lib/mysql-connector-java-5.0.7-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
