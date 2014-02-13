@@ -24,7 +24,7 @@ public class OMIMParser {
     private FileInputStream in;
     private FileOutputStream out;
     private int diseaseColNbr, diseaseCount;
-    private FileInputStream mim2gene;
+    private BufferedReader mim2gene;
     private ConcurrentSkipListSet<String> genes, diseases;
 
     public static final int GENEMAP1 = 1;
@@ -36,9 +36,7 @@ public class OMIMParser {
         this.out = new FileOutputStream(out);
         genes = new ConcurrentSkipListSet<>(String.CASE_INSENSITIVE_ORDER);
         diseases = new ConcurrentSkipListSet<>(String.CASE_INSENSITIVE_ORDER);
-        //mim2gene = new FileInputStream("indexOnUmlsOmim");
-        //mim2gene = new FileInputStream("mim2gene.txt");
-		//new BufferedReader(new InputStreamReader(mim2gene)),new OutputStreamWriter(out));
+        mim2gene = new BufferedReader(new InputStreamReader(new FileInputStream("mim2gene.txt")));
 		
         switch (type) {
             case GENEMAP1:
@@ -100,7 +98,7 @@ public class OMIMParser {
         while (line != null) {
             tmp = getField(line, 5).split(",")[0];
             hasLabel.setSubject(tmp);
-            //tmp = getGeneId(tmp);
+            tmp = GeneSymbolToID(tmp);
             hasLabel.setObject("ge:" + tmp);
             diseaseProperty.setObject("ge:" + tmp);
             diseaseProperty.setProperty("omim:involvedInMechanismOf");
@@ -139,22 +137,20 @@ public class OMIMParser {
         System.out.println(err + " error(s) over " + total);
     }
 	
-	    public static void GeneSymbolToID(BufferedReader in, OutputStreamWriter out) throws IOException{
+	    public String GeneSymbolToID(String geneSymbol) throws IOException{
     	String line;
     	String tmpLine[];
-		line = in.readLine();
-		Triplet t = new Triplet();
+		line = mim2gene.readLine();
 		while(line != null){
 	    	tmpLine=line.split("	");
-	    	if (!tmpLine[3].equals("-")) {
+	    	if (!tmpLine[3].equals("-")) {/*
 	            t.setObject("ge:" + tmpLine[2]);
 	            t.setProperty("ge:hasNcbiId");
-	            t.setSubject("\"" + tmpLine[3]+"\"");
-                out.write(t + "\n");
+	            t.setSubject("\"" + tmpLine[3]+"\"");*/
 	    	}
-	    	line = in.readLine();
+	    	line = mim2gene.readLine();
 	    }
- 	
+ 	return null;
     }
 
 }
