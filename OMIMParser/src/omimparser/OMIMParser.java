@@ -98,14 +98,9 @@ public class OMIMParser {
         hasLabel.setProperty("rdfs:hasLabel");
         while (line != null) {
             tmp = getField(line, 5).split(",")[0];
-            hasLabel.setSubject(tmp);
             tmp = GeneSymbolToID(tmp);
-            hasLabel.setObject("ge:" + tmp);
             diseaseProperty.setObject("ge:" + tmp);
             diseaseProperty.setProperty("omim:involvedInMechanismOf");
-            if(genes.add(tmp)){
-                writer.write(hasLabel + "\r\n");
-            }
             tmp = "";
             for (int i = 0; i < diseaseCount; i++) {
                 tmp += getField(line, diseaseColNbr + i);
@@ -114,15 +109,19 @@ public class OMIMParser {
             String id;
             for (String data1 : data) {
                 try {
-                    data1 = data1.replaceAll(".*, ?([0-9]+) ?\\([0-9]+\\)", "$1");
+                    data1 = data1.replaceAll("(.*), ?([0-9]+) ?\\([0-9]+\\)", "$1;$2");
                     total ++;
-                    id = lucene.getCuidFromMimId(data1);
+                    if(data1.split(";").length < 2){
+                        err ++;
+                        continue;
+                    }
+                    id = lucene.getCuidFromMimId(data1.split(";")[1]);
                     if (id != null && !id.equals("")) {
                         diseaseProperty.setSubject("di:" + id);
                         writer.write(diseaseProperty + "\r\n");
                         if(diseases.add(id)){
                             hasLabel.setObject("di:" + id);
-                            hasLabel.setSubject(data1);
+                            hasLabel.setSubject("\"" + data1.split(";")[0] + "\"");
                             writer.write(hasLabel + "\r\n");
                         }
                     }else{
@@ -133,6 +132,12 @@ public class OMIMParser {
                 }
             }
             line = reader.readLine();
+        }
+        for(String s : genes){
+            data = s.split(" ");
+            hasLabel.setObject("ge:" + data[1]);
+            hasLabel.setSubject("\"" + data[0] + "\"");
+            writer.write(hasLabel + "\r\n");
         }
         writer.close();
         reader.close();
