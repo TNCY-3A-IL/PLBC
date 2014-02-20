@@ -22,7 +22,7 @@ public class Gene {
 	private List<String> clinicalAnnotationTypes;
 	private HashMap<String, String> relatedDrugs;
 	
-	public Gene (String[] line){
+	public Gene (String[] line, Stats s){
 		String[] temp;
 		drugName = "'sup?";
 		clinicalAnnotationTypes = new ArrayList<String>();
@@ -41,7 +41,7 @@ public class Gene {
 		
 		temp = line[11].split(";");
 		for (String var : temp) {
-			relatedDrugs.put(var, findCui(var));
+			relatedDrugs.put(var, findCui(var, s));
 		}
 	}
 	
@@ -87,12 +87,15 @@ public class Gene {
 		return id +"   " + gkbName + "   "+ levelOfEvidence + "   "+ clinicalAnnotationTypes.toString() + "   "+ printDrugs() ;
  	}
 	
-	public String findCui(String inputDrugLabel){
+	public String findCui(String inputDrugLabel, Stats s){
 		String drugCui="error";
 		SimpleLuceneSearch searchInMrConso;
 		try {
 			searchInMrConso = new SimpleLuceneSearch("index/indexOnMesh2012");
 			drugCui=searchInMrConso.getCuidFromLabel(inputDrugLabel);
+			if(drugCui.equals("")){
+				s.incWarning();
+			}
 			return (drugCui);
 			
 		} catch (CorruptIndexException e) {
