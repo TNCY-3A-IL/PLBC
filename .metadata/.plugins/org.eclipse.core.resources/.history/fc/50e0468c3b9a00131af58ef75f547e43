@@ -1,0 +1,56 @@
+package Serveur;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.ResultSetMetaData;
+
+
+public class SingletonServeur {
+	
+	static String DB_SERVER  = "jdbc:mysql://neptune.esial.uhp-nancy.fr:3306/";
+	static String DB         = "gmd";
+	static String DRIVER     = "com.mysql.jdbc.Driver";
+	static String USER_NAME  = "gmd-read";
+	static String USER_PSWD  = "esial";
+	static String DB_TABLE1  = "pharmgkb_gene";
+	
+	private static volatile SingletonServeur instance = null;
+	private static Connection con =null;
+	
+	private SingletonServeur() throws SQLException, ClassNotFoundException{
+		Class.forName(DRIVER);
+        con = DriverManager.getConnection(DB_SERVER+DB, USER_NAME, USER_PSWD);
+	}
+
+	public static SingletonServeur getInstance() throws ClassNotFoundException, SQLException{
+		if(SingletonServeur.instance == null){
+			synchronized (SingletonServeur.class) {
+				if(SingletonServeur.instance == null){
+					SingletonServeur.instance = new SingletonServeur();
+				}
+			}
+		}
+		
+		return SingletonServeur.instance;
+	}
+	
+	private static int count = 0;
+	
+	public String makeRequest(String geneName) throws SQLException{
+		String myQuery = "SELECT * " +
+		           "FROM  " + DB_TABLE1 +
+		           " WHERE symbol='"+geneName+"';";
+		Statement st = con.createStatement();
+		ResultSet res = st.executeQuery(myQuery);
+		if (!res.isBeforeFirst()){
+			System.err.println(count);
+		}
+		res.next();
+		count++;
+		ResultSetMetaData resmeta  = res.getMetaData();
+		return res.getString(resmeta.getColumnName(1));
+	}
+}

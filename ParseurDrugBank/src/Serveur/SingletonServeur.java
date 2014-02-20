@@ -5,10 +5,12 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.ResultSetMetaData;
+
 
 public class SingletonServeur {
 	
-	static String DB_SERVER  = "jdbc:neptune.esial.uhp-nancy.fr";
+	static String DB_SERVER  = "jdbc:mysql://neptune.esial.uhp-nancy.fr:3306/";
 	static String DB         = "gmd";
 	static String DRIVER     = "com.mysql.jdbc.Driver";
 	static String USER_NAME  = "gmd-read";
@@ -34,14 +36,19 @@ public class SingletonServeur {
 		
 		return SingletonServeur.instance;
 	}
+
 	
 	public String makeRequest(String geneName) throws SQLException{
 		String myQuery = "SELECT * " +
 		           "FROM  " + DB_TABLE1 +
-		           "WHERE symbol='"+geneName+"';";
+		           " WHERE symbol='"+geneName+"';";
 		Statement st = con.createStatement();
 		ResultSet res = st.executeQuery(myQuery);
-		
-		return res.getString("entrez_id");
+		if (!res.isBeforeFirst()){
+			return "";
+		}
+		res.next();
+		ResultSetMetaData resmeta  = res.getMetaData();
+		return res.getString(resmeta.getColumnName(1));
 	}
 }

@@ -1,0 +1,1276 @@
+@prefix rdfs: </http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dr: <http://telecomnancy.eu/drug/> .
+@prefix ge: <http://telecomnancy.eu/gene/> .
+@prefix db: <http://telecomnancy.eu/db/> .
+dr:C0772394 rdfs:hasLabel "Lepirudin" .
+dr:C0772394 db:inhibitorOfTarget ge:PA157.
+dr:C0995188 rdfs:hasLabel "Cetuximab" .
+dr:C0995188 db:antagonistOfTarget ge:PA7360.
+dr:C1135662 rdfs:hasLabel "Dornase Alfa" .
+dr:C0717670 rdfs:hasLabel "Denileukin diftitox" .
+dr:C0717670 db:binderOfTarget ge:PA29828.
+dr:C0717670 db:agonistOfTarget ge:PA29829.
+dr:C0717758 rdfs:hasLabel "Etanercept" .
+dr:C0717758 db:antibodyOfTarget ge:PA435.
+dr:C0168273 rdfs:hasLabel "Bivalirudin" .
+dr:C0168273 db:inhibitorOfTarget ge:PA157.
+dr:C0085272 rdfs:hasLabel "Leuprolide" .
+dr:C0085272 db:agonistOfTarget ge:PA28800.
+dr:C0391001 rdfs:hasLabel "Peginterferon alfa-2a" .
+dr:C0391001 db:agonistOfTarget ge:PA29671.
+dr:C0391001 db:agonistOfTarget ge:PA29670.
+dr:C0032143 rdfs:hasLabel "Alteplase" .
+dr:C0032143 db:activatorOfTarget ge:PA33405.
+dr:C0142046 rdfs:hasLabel "Sermorelin" .
+dr:C0142046 db:agonistOfTarget ge:PA28676.
+dr:C0699817 rdfs:hasLabel "Interferon alfa-n1" .
+dr:C0699817 db:agonistOfTarget ge:PA29671.
+dr:C0699817 db:agonistOfTarget ge:PA29670.
+dr:C0937950 rdfs:hasLabel "Darbepoetin alfa" .
+dr:C0937950 db:agonistOfTarget ge:PA27834.
+dr:C0042071 rdfs:hasLabel "Urokinase" .
+dr:C0042071 db:activatorOfTarget ge:PA33405.
+dr:C0120107 rdfs:hasLabel "Goserelin" .
+dr:C0120107 db:agonistOfTarget ge:PA30357.
+dr:C0120107 db:agonistOfTarget ge:PA28800.
+dr:C0256103 rdfs:hasLabel "Reteplase" .
+dr:C0256103 db:activatorOfTarget ge:PA33405.
+dr:C0357126 rdfs:hasLabel "Epoetin alfa" .
+dr:C0357126 db:agonistOfTarget ge:PA27834.
+dr:C0073994 rdfs:hasLabel "Salmon Calcitonin" .
+dr:C0073994 db:agonistOfTarget ge:PA26032.
+dr:C1621234 rdfs:hasLabel "Interferon alfa-n3" .
+dr:C1621234 db:agonistOfTarget ge:PA29670.
+dr:C1621234 db:agonistOfTarget ge:PA29671.
+dr:C1136535 rdfs:hasLabel "Pegfilgrastim" .
+dr:C1136535 db:agonistOfTarget ge:PA26942.
+dr:C0216231 rdfs:hasLabel "Sargramostim" .
+dr:C0216231 db:agonistOfTarget ge:PA26938.
+dr:C0216231 db:agonistOfTarget ge:PA29831.
+dr:C0216231 db:agonistOfTarget ge:PA26939.
+dr:C0216231 db:agonistOfTarget ge:PA35589.
+dr:C0036534 rdfs:hasLabel "Secretin" .
+dr:C0036534 db:agonistOfTarget ge:PA35018.
+dr:C0796545 rdfs:hasLabel "Peginterferon alfa-2b" .
+dr:C0796545 db:agonistOfTarget ge:PA29670.
+dr:C0796545 db:agonistOfTarget ge:PA29671.
+dr:C0003993 rdfs:hasLabel "Asparaginase" .
+dr:C2587204 rdfs:hasLabel "Thyrotropin Alfa" .
+dr:C2587204 db:agonistOfTarget ge:PA37042.
+dr:C1307126 rdfs:hasLabel "Antihemophilic Factor" .
+dr:C1307126 db:activatorOfTarget ge:PA27940.
+dr:C1307126 db:cofactorOfTarget ge:PA27954.
+dr:C1307126 db:binderOfTarget ge:PA37337.
+dr:C1307126 db:antagonistOfTarget ge:PA33280.
+dr:C1307126 db:binderOfTarget ge:PA25043.
+dr:C1307126 db:chaperoneOfTarget ge:PA29504.
+dr:C1307126 db:chaperoneOfTarget ge:PA26046.
+dr:C1307126 db:chaperoneOfTarget ge:PA26055.
+dr:C1307126 db:chaperoneOfTarget ge:PA30399.
+dr:C1307126 db:modulatorOfTarget ge:PA233.
+dr:C1307126 db:modulatorOfTarget ge:PA134925788.
+dr:C0245109 rdfs:hasLabel "Anakinra" .
+dr:C0245109 db:antagonistOfTarget ge:PA29809.
+dr:C0018160 rdfs:hasLabel "Gramicidin D" .
+dr:C0018160 db:inhibitorOfTransporter ge:PA267.
+dr:C0078956 rdfs:hasLabel "Anistreplase" .
+dr:C0078956 db:activatorOfTarget ge:PA33405.
+dr:C0872913 rdfs:hasLabel "Tenecteplase" .
+dr:C0872913 db:activatorOfTarget ge:PA33405.
+dr:C0025326 rdfs:hasLabel "Menotropins" .
+dr:C0025326 db:binderOfTarget ge:PA28386.
+dr:C0021741 rdfs:hasLabel "Interferon gamma-1b" .
+dr:C0021741 db:binderOfTarget ge:PA29675.
+dr:C0021741 db:binderOfTarget ge:PA29676.
+dr:C0011701 rdfs:hasLabel "Desmopressin" .
+dr:C0011701 db:agonistOfTarget ge:PA25189.
+dr:C0015505 rdfs:hasLabel "Coagulation factor VIIa" .
+dr:C0537670 rdfs:hasLabel "Oprelvekin" .
+dr:C0537670 db:agonistOfTarget ge:PA29782.
+dr:C0677829 rdfs:hasLabel "Palifermin" .
+dr:C0677829 db:binderOfTarget ge:PA28128.
+dr:C0218986 rdfs:hasLabel "Aldesleukin" .
+dr:C0218986 db:agonistOfTarget ge:PA29829.
+dr:C0218986 db:modulatorOfTarget ge:PA29829.
+dr:C0218986 db:agonistOfTarget ge:PA29828.
+dr:C0218986 db:modulatorOfTarget ge:PA29828.
+dr:C0218986 db:agonistOfTarget ge:PA196.
+dr:C0006051 rdfs:hasLabel "Botulinum Toxin Type B" .
+dr:C0006051 db:binderOfTarget ge:PA37267.
+dr:C0006051 db:binderOfTarget ge:PA37266.
+dr:C0966225 rdfs:hasLabel "Omalizumab" .
+dr:C0966225 db:antagonistOfTarget ge:PA31109.
+dr:C0293359 rdfs:hasLabel "Insulin Lispro" .
+dr:C0293359 db:agonistOfTarget ge:PA202.
+dr:C0907402 rdfs:hasLabel "Insulin Glargine" .
+dr:C0907402 db:agonistOfTarget ge:PA202.
+dr:C0907402 db:agonistOfTarget ge:PA29698.
+dr:C0162745 rdfs:hasLabel "Collagenase" .
+dr:C0937932 rdfs:hasLabel "Rasburicase" .
+dr:C0209366 rdfs:hasLabel "Cetrorelix" .
+dr:C0209366 db:antagonistOfTarget ge:PA28800.
+dr:C1122087 rdfs:hasLabel "Adalimumab" .
+dr:C1122087 db:antibodyOfTarget ge:PA435.
+dr:C0291140 rdfs:hasLabel "Imiglucerase" .
+dr:C0288672 rdfs:hasLabel "Abciximab" .
+dr:C0288672 db:antagonistOfTarget ge:PA205.
+dr:C0288672 db:antagonistOfTarget ge:PA29938.
+dr:C1533699 rdfs:hasLabel "Gemtuzumab ozogamicin" .
+dr:C1533699 db:antibodyOfTarget ge:PA26210.
+dr:C0209389 rdfs:hasLabel "Satumomab Pendetide" .
+dr:C0071568 rdfs:hasLabel "Pegaspargase" .
+dr:C0254119 rdfs:hasLabel "Interferon beta-1a" .
+dr:C0254119 db:agonistOfTarget ge:PA29670.
+dr:C0164674 rdfs:hasLabel "Pegademase bovine" .
+dr:C0164674 db:binderOfTarget ge:PA28962.
+dr:C0253563 rdfs:hasLabel "Eptifibatide" .
+dr:C0666743 rdfs:hasLabel "Infliximab" .
+dr:C0666743 db:inhibitorOfTarget ge:PA435.
+dr:C0060787 rdfs:hasLabel "Follitropin beta" .
+dr:C0060787 db:agonistOfTarget ge:PA28386.
+dr:C1705480 rdfs:hasLabel "Vasopressin" .
+dr:C1705480 db:agonistOfTarget ge:PA25189.
+dr:C1705480 db:substrateOfTransporter ge:PA116.
+dr:C0244713 rdfs:hasLabel "Interferon beta-1b" .
+dr:C0244713 db:agonistOfTarget ge:PA29670.
+dr:C0244713 db:agonistOfTarget ge:PA29671.
+dr:C0164613 rdfs:hasLabel "Interferon alfacon-1" .
+dr:C0164613 db:binderOfTarget ge:PA29670.
+dr:C0164613 db:binderOfTarget ge:PA29671.
+dr:C0020197 rdfs:hasLabel "Hyaluronidase" .
+dr:C0020197 db:inhibitorOfTarget ge:PA350.
+dr:C0724601 rdfs:hasLabel "Insulin, porcine" .
+dr:C0724601 db:binderOfTarget ge:PA202.
+dr:C0728747 rdfs:hasLabel "Trastuzumab" .
+dr:C0728747 db:antibodyOfTarget ge:PA27844.
+dr:C0393022 rdfs:hasLabel "Rituximab" .
+dr:C0393022 db:antibodyOfTarget ge:PA31111.
+dr:C0676831 rdfs:hasLabel "Basiliximab" .
+dr:C0676831 db:antibodyOfTarget ge:PA29828.
+dr:C0676831 db:antibodyOfTarget ge:PA29829.
+dr:C0700607 rdfs:hasLabel "Digoxin Immune Fab" .
+dr:C0057144 rdfs:hasLabel "Daptomycin" .
+dr:C0913469 rdfs:hasLabel "Pegvisomant" .
+dr:C0913469 db:antagonistOfTarget ge:PA28674.
+dr:C0006050 rdfs:hasLabel "Botulinum Toxin Type A" .
+dr:C0006050 db:inhibitorOfTarget ge:PA35980.
+dr:C0770343 rdfs:hasLabel "Pancrelipase" .
+dr:C0038418 rdfs:hasLabel "Streptokinase" .
+dr:C0038418 db:activatorOfTarget ge:PA33405.
+dr:C0038418 db:cleavageOfTarget ge:PA27946.
+dr:C0383429 rdfs:hasLabel "Alemtuzumab" .
+dr:C0383429 db:antibodyOfTarget ge:PA26350.
+dr:C0102139 rdfs:hasLabel "Alglucerase" .
+dr:C0529572 rdfs:hasLabel "Capromab" .
+dr:C0529572 db:other/unknownOfTarget ge:PA28205.
+dr:C0010592 rdfs:hasLabel "Cyclosporine" .
+dr:C0010592 db:binderOfTarget ge:PA26053.
+dr:C0010592 db:inhibitorOfTarget ge:PA33682.
+dr:C0010592 db:substrateOfTransporter ge:PA267.
+dr:C0010592 db:inhibitorOfTransporter ge:PA267.
+dr:C0010592 db:inducerOfTransporter ge:PA267.
+dr:C0010592 db:inhibitorOfTransporter ge:PA376.
+dr:C0010592 db:inhibitorOfTransporter ge:PA374.
+dr:C0010592 db:inhibitorOfTransporter ge:PA244.
+dr:C0010592 db:inhibitorOfTransporter ge:PA328.
+dr:C0010592 db:inhibitorOfTransporter ge:PA318.
+dr:C0010592 db:inhibitorOfTransporter ge:PA317.
+dr:C0010592 db:inhibitorOfTransporter ge:PA388.
+dr:C0010592 db:inhibitorOfTransporter ge:PA24392.
+dr:C0010592 db:inhibitorOfTransporter ge:PA116.
+dr:C0010592 db:inhibitorOfTransporter ge:PA390.
+dr:C0010592 db:inhibitorOfTransporter ge:PA134865839.
+dr:C0962603 rdfs:hasLabel "Alefacept" .
+dr:C0962603 db:inhibitorOfTarget ge:PA26198.
+dr:C0015777 rdfs:hasLabel "Felypressin" .
+dr:C0015777 db:agonistOfTarget ge:PA25187.
+dr:C0524639 rdfs:hasLabel "Urofollitropin" .
+dr:C0524639 db:agonistOfTarget ge:PA28386.
+dr:C1174995 rdfs:hasLabel "Efalizumab" .
+dr:C1174995 db:antibodyOfTarget ge:PA29948.
+dr:C0036773 rdfs:hasLabel "Serum albumin" .
+dr:C0003442 rdfs:hasLabel "Antithymocyte globulin" .
+dr:C0003442 db:inhibitorOfTarget ge:PA26193.
+dr:C0003442 db:antagonistOfTarget ge:PA29309.
+dr:C0210630 rdfs:hasLabel "Filgrastim" .
+dr:C0210630 db:stimulatorOfTarget ge:PA26942.
+dr:C0210630 db:other/unknownOfTarget ge:PA27735.
+dr:C0015491 rdfs:hasLabel "Coagulation Factor IX" .
+dr:C0015491 db:activatorOfTarget ge:PA27940.
+dr:C0015491 db:ligandOfTarget ge:PA27941.
+dr:C0015491 db:ligandOfTarget ge:PA160.
+dr:C0015491 db:cofactorOfTarget ge:PA27952.
+dr:C0379135 rdfs:hasLabel "Becaplermin" .
+dr:C1137427 rdfs:hasLabel "Agalsidase beta" .
+dr:C0028833 rdfs:hasLabel "Octreotide" .
+dr:C0028833 db:binderOfTarget ge:PA36155.
+dr:C0965390 rdfs:hasLabel "Abarelix" .
+dr:C0965390 db:antagonistOfTarget ge:PA28800.
+dr:C0030095 rdfs:hasLabel "Oxytocin" .
+dr:C0030095 db:agonistOfTarget ge:PA32858.
+dr:C0030095 db:binderOfTarget ge:PA32857.
+dr:C1172734 rdfs:hasLabel "Natalizumab" .
+dr:C1172734 db:antibodyOfTarget ge:PA29940.
+dr:C0537439 rdfs:hasLabel "Enfuvirtide" .
+dr:C0672596 rdfs:hasLabel "Palivizumab" .
+dr:C0663182 rdfs:hasLabel "Daclizumab" .
+dr:C0663182 db:antibodyOfTarget ge:PA29828.
+dr:C0663182 db:antibodyOfTarget ge:PA29829.
+dr:C0796392 rdfs:hasLabel "Bevacizumab" .
+dr:C0034266 rdfs:hasLabel "Pyridoxal Phosphate" .
+dr:C0034266 db:cofactorOfTarget ge:PA24634.
+dr:C0034266 db:cofactorOfTarget ge:PA28507.
+dr:C0034266 db:cofactorOfTarget ge:PA26123.
+dr:C0034266 db:cofactorOfTarget ge:PA30258.
+dr:C0034266 db:cofactorOfTarget ge:PA35753.
+dr:C0034266 db:cofactorOfTarget ge:PA31607.
+dr:C0034266 db:activatorOfTarget ge:PA28817.
+dr:C0034266 db:cofactorOfTarget ge:PA31880.
+dr:C0034266 db:cofactorOfTarget ge:PA31897.
+dr:C0034266 db:cofactorOfTarget ge:PA24364.
+dr:C0034266 db:inhibitorOfTarget ge:PA24372.
+dr:C0034266 db:cofactorOfTarget ge:PA134915565.
+dr:C0034266 db:cofactorOfTarget ge:PA35725.
+dr:C0034266 db:cofactorOfTarget ge:PA36338.
+dr:C0034266 db:cofactorOfTarget ge:PA26138.
+dr:C0034266 db:cofactorOfTarget ge:PA134906927.
+dr:C0034266 db:cofactorOfTarget ge:PA34068.
+dr:C0034266 db:cofactorOfTarget ge:PA36107.
+dr:C0034266 db:cofactorOfTarget ge:PA38771.
+dr:C0034266 db:cofactorOfTarget ge:PA29233.
+dr:C0034266 db:cofactorOfTarget ge:PA142672642.
+dr:C0034266 db:cofactorOfTarget ge:PA35616.
+dr:C0034266 db:cofactorOfTarget ge:PA28603.
+dr:C0034266 db:cofactorOfTarget ge:PA28716.
+dr:C0034266 db:cofactorOfTarget ge:PA28947.
+dr:C0034266 db:cofactorOfTarget ge:PA128395782.
+dr:C0034266 db:cofactorOfTarget ge:PA24688.
+dr:C0034266 db:cofactorOfTarget ge:PA24633.
+dr:C0034266 db:cofactorOfTarget ge:PA134882132.
+dr:C0034266 db:cofactorOfTarget ge:PA36106.
+dr:C0034266 db:cofactorOfTarget ge:PA27004.
+dr:C0034266 db:cofactorOfTarget ge:PA25288.
+dr:C0034266 db:cofactorOfTarget ge:PA25289.
+dr:C0034266 db:cofactorOfTarget ge:PA33810.
+dr:C0034266 db:cofactorOfTarget ge:PA28391.
+dr:C0034266 db:cofactorOfTarget ge:PA28818.
+dr:C0034266 db:cofactorOfTarget ge:PA34066.
+dr:C0034266 db:cofactorOfTarget ge:PA34069.
+dr:C0034266 db:cofactorOfTarget ge:PA140.
+dr:C0034266 db:cofactorOfTarget ge:PA35755.
+dr:C0034266 db:cofactorOfTarget ge:PA28507.
+dr:C0034266 db:cofactorOfTarget ge:PA35755.
+dr:C0034266 db:cofactorOfTarget ge:PA24688.
+dr:C0034266 db:cofactorOfTarget ge:PA34066.
+dr:C0034266 db:cofactorOfTarget ge:PA28508.
+dr:C0034266 db:cofactorOfTarget ge:PA140.
+dr:C0034266 db:cofactorOfTarget ge:PA140.
+dr:C0034266 db:cofactorOfTarget ge:PA162399182.
+dr:C0034266 db:cofactorOfTarget ge:PA162381274.
+dr:C0034266 db:cofactorOfTarget ge:PA134944477.
+dr:C0034266 db:cofactorOfTarget ge:PA134979359.
+dr:C0034266 db:cofactorOfTarget ge:PA134900760.
+dr:C0034266 db:cofactorOfTarget ge:PA162376015.
+dr:C0034266 db:cofactorOfTarget ge:PA28507.
+dr:C0034266 db:cofactorOfTarget ge:PA35755.
+dr:C0034266 db:cofactorOfTarget ge:PA24689.
+dr:C0034266 db:cofactorOfTarget ge:PA28948.
+dr:C0034266 db:cofactorOfTarget ge:PA134964534.
+dr:C0034266 db:cofactorOfTarget ge:PA134862016.
+dr:C0034266 db:cofactorOfTarget ge:PA32984.
+dr:C0034266 db:cofactorOfTarget ge:PA37877.
+dr:C0034266 db:cofactorOfTarget ge:PA162402915.
+dr:C0034266 db:cofactorOfTarget ge:PA162404677.
+dr:C0034266 db:cofactorOfTarget ge:PA38771.
+dr:C0042845 rdfs:hasLabel "Cyanocobalamin" .
+dr:C0042845 db:cofactorOfTarget ge:PA31272.
+dr:C0042845 db:cofactorOfTarget ge:PA31327.
+dr:C0042845 db:cofactorOfTarget ge:PA31277.
+dr:C0042845 db:cofactorOfTarget ge:PA134912808.
+dr:C0042845 db:cofactorOfTarget ge:PA142671348.
+dr:C0042845 db:cofactorOfTarget ge:PA245.
+dr:C0042845 db:substrateOfTransporter ge:PA134962814.
+dr:C0042845 db:substrateOfTransporter ge:PA36403.
+dr:C0042845 db:substrateOfTransporter ge:PA36404.
+dr:C0042845 db:substrateOfTransporter ge:PA27044.
+dr:C0048898 rdfs:hasLabel "Tetrahydrofolic acid" .
+dr:C0048898 db:cofactorOfTarget ge:PA31236.
+dr:C0048898 db:cofactorOfTarget ge:PA31238.
+dr:C0048898 db:cofactorOfTarget ge:PA24780.
+dr:C0048898 db:cofactorOfTarget ge:PA24780.
+dr:C0048898 db:cofactorOfTarget ge:PA28393.
+dr:C0048898 db:cofactorOfTarget ge:PA31272.
+dr:C0048898 db:cofactorOfTarget ge:PA28391.
+dr:C0048898 db:cofactorOfTarget ge:PA25094.
+dr:C0048898 db:cofactorOfTarget ge:PA35753.
+dr:C0048898 db:cofactorOfTarget ge:PA35755.
+dr:C0048898 db:cofactorOfTarget ge:PA245.
+dr:C0048898 db:cofactorOfTarget ge:PA35755.
+dr:C0048898 db:cofactorOfTarget ge:PA245.
+dr:C0048898 db:cofactorOfTarget ge:PA35755.
+dr:C0048898 db:cofactorOfTarget ge:PA142671304.
+dr:C0048898 db:cofactorOfTarget ge:PA245.
+dr:C0048898 db:inhibitorOfTransporter ge:PA116.
+dr:C0019602 rdfs:hasLabel "L-Histidine" .
+dr:C0019602 db:substrateOfTransporter ge:PA38197.
+dr:C0019602 db:inhibitorOfTransporter ge:PA38197.
+dr:C0036002 rdfs:hasLabel "S-Adenosylmethionine" .
+dr:C0036002 db:cofactorOfTarget ge:PA28794.
+dr:C0036002 db:cofactorOfTarget ge:PA24763.
+dr:C0036002 db:cofactorOfTarget ge:PA30647.
+dr:C0036002 db:activatorOfTarget ge:PA26123.
+dr:C0036002 db:cofactorOfTarget ge:PA30646.
+dr:C0036002 db:cofactorOfTarget ge:PA117.
+dr:C0072802 rdfs:hasLabel "Pyruvic acid" .
+dr:C0072802 db:inhibitorOfTarget ge:PA24372.
+dr:C0072802 db:substrateOfTransporter ge:PA35819.
+dr:C0072802 db:inhibitorOfTransporter ge:PA35819.
+dr:C0072802 db:substrateOfTransporter ge:PA35813.
+dr:C0072802 db:inhibitorOfTransporter ge:PA35813.
+dr:C0072802 db:substrateOfTransporter ge:PA38197.
+dr:C0072802 db:inhibitorOfTransporter ge:PA38197.
+dr:C0072802 db:inhibitorOfTransporter ge:PA35840.
+dr:C0072802 db:substrateOfTransporter ge:PA35815.
+dr:C0031453 rdfs:hasLabel "L-Phenylalanine" .
+dr:C0031453 db:binderOfTarget ge:PA351.
+dr:C0031453 db:inhibitorOfTransporter ge:PA38197.
+dr:C0005575 rdfs:hasLabel "Biotin" .
+dr:C0008405 rdfs:hasLabel "Choline" .
+dr:C0008405 db:product ofOfTarget ge:PA33100.
+dr:C0008405 db:product ofOfTarget ge:PA20.
+dr:C0008405 db:product ofOfTarget ge:PA33099.
+dr:C0008405 db:product ofOfTarget ge:PA33397.
+dr:C0008405 db:product ofOfTarget ge:PA25294.
+dr:C0008405 db:product ofOfTarget ge:PA164742228.
+dr:C0008405 db:product ofOfTarget ge:PA33276.
+dr:C0008405 db:substrateOfTransporter ge:PA331.
+dr:C0008405 db:inhibitorOfTransporter ge:PA331.
+dr:C0008405 db:substrateOfTransporter ge:PA329.
+dr:C0008405 db:inhibitorOfTransporter ge:PA329.
+dr:C0008405 db:inhibitorOfTransporter ge:PA330.
+dr:C0008405 db:inhibitorOfTransporter ge:PA333.
+dr:C0008405 db:inhibitorOfTransporter ge:PA332.
+dr:C0008405 db:substrateOfTransporter ge:PA134958011.
+dr:C0008405 db:substrateOfTransporter ge:PA25930.
+dr:C0008405 db:substrateOfTransporter ge:PA142670899.
+dr:C0008405 db:substrateOfTransporter ge:PA142670900.
+dr:C0008405 db:substrateOfTransporter ge:PA37838.
+dr:C0024337 rdfs:hasLabel "L-Lysine" .
+dr:C0024337 db:substrateOfTransporter ge:PA38197.
+dr:C0024337 db:inhibitorOfTransporter ge:PA38197.
+dr:C0024337 db:inhibitorOfTransporter ge:PA332.
+dr:C0003765 rdfs:hasLabel "L-Arginine" .
+dr:C0003765 db:inhibitorOfTransporter ge:PA333.
+dr:C0003765 db:inhibitorOfTransporter ge:PA38197.
+dr:C0003765 db:inhibitorOfTransporter ge:PA332.
+dr:C0003968 rdfs:hasLabel "Vitamin C" .
+dr:C0003968 db:activatorOfTarget ge:PA33411.
+dr:C0037874 rdfs:hasLabel "Spermine" .
+dr:C0037874 db:ligandOfTarget ge:PA35972.
+dr:C0037874 db:ligandOfTarget ge:PA25701.
+dr:C0037874 db:product ofOfTarget ge:PA31897.
+dr:C0037874 db:inhibitorOfTransporter ge:PA332.
+dr:C0037874 db:substrateOfTransporter ge:PA329.
+dr:C0004015 rdfs:hasLabel "L-Aspartic Acid" .
+dr:C0004015 db:inhibitorOfTransporter ge:PA38197.
+dr:C0017797 rdfs:hasLabel "L-Glutamine" .
+dr:C0017797 db:product ofOfTarget ge:PA33559.
+dr:C0017797 db:product ofOfTarget ge:PA28743.
+dr:C0017797 db:inhibitorOfTransporter ge:PA38197.
+dr:C0017797 db:substrateOfTransporter ge:PA38281.
+dr:C0017797 db:substrateOfTransporter ge:PA35830.
+dr:C0017797 db:substrateOfTransporter ge:PA35926.
+dr:C0001465 rdfs:hasLabel "Adenosine monophosphate" .
+dr:C0001465 db:activatorOfTarget ge:PA26864.
+dr:C0001465 db:product ofOfTarget ge:PA33318.
+dr:C0001465 db:product ofOfTarget ge:PA33129.
+dr:C0001465 db:activatorOfTarget ge:PA34068.
+dr:C0001465 db:activatorOfTarget ge:PA33746.
+dr:C0001465 db:product ofOfTarget ge:PA29286.
+dr:C0001465 db:product ofOfTarget ge:PA33130.
+dr:C0001465 db:product ofOfTarget ge:PA24430.
+dr:C0001465 db:product ofOfTarget ge:PA24429.
+dr:C0001465 db:activatorOfTarget ge:PA33744.
+dr:C0001465 db:activatorOfTarget ge:PA33747.
+dr:C0001465 db:product ofOfTarget ge:PA24560.
+dr:C0001465 db:product ofOfTarget ge:PA27966.
+dr:C0001465 db:antagonistOfTarget ge:PA28018.
+dr:C0001465 db:inhibitory allosteric modulatorOfTarget ge:PA28018.
+dr:C0001465 db:product ofOfTarget ge:PA24579.
+dr:C0051405 rdfs:hasLabel "Alpha-Linolenic Acid" .
+dr:C0051405 db:ligandOfTarget ge:PA27973.
+dr:C0051405 db:ligandOfTarget ge:PA27974.
+dr:C0036720 rdfs:hasLabel "L-Serine" .
+dr:C0036720 db:inhibitorOfTransporter ge:PA38197.
+dr:C0025646 rdfs:hasLabel "L-Methionine" .
+dr:C0025646 db:product ofOfTarget ge:PA31277.
+dr:C0025646 db:product ofOfTarget ge:PA31272.
+dr:C0025646 db:product ofOfTarget ge:PA30765.
+dr:C0025646 db:product ofOfTarget ge:PA25350.
+dr:C0025646 db:product ofOfTarget ge:PA25351.
+dr:C0025646 db:inhibitorOfTransporter ge:PA38197.
+dr:C0041485 rdfs:hasLabel "L-Tyrosine" .
+dr:C0041485 db:binderOfTarget ge:PA351.
+dr:C0041485 db:inhibitorOfTransporter ge:PA35814.
+dr:C0041485 db:inhibitorOfTransporter ge:PA38197.
+dr:C0006674 rdfs:hasLabel "Calcitriol" .
+dr:C0006674 db:antagonistOfTarget ge:PA37301.
+dr:C0010682 rdfs:hasLabel "L-Cystine" .
+dr:C0010682 db:inhibitorOfTransporter ge:PA38197.
+dr:C0075429 rdfs:hasLabel "Succinic acid" .
+dr:C0075429 db:inhibitorOfTarget ge:PA24702.
+dr:C0075429 db:substrateOfTransporter ge:PA389.
+dr:C0035527 rdfs:hasLabel "Riboflavin" .
+dr:C0035527 db:ligandOfTarget ge:PA134916697.
+dr:C0035527 db:product ofOfTarget ge:PA25374.
+dr:C0035527 db:inhibitorOfTransporter ge:PA388.
+dr:C0001056 rdfs:hasLabel "N-Acetyl-D-glucosamine" .
+dr:C0001056 db:activatorOfTarget ge:PA31437.
+dr:C0061472 rdfs:hasLabel "L-Glutamic Acid" .
+dr:C0061472 db:substrateOfTransporter ge:PA38197.
+dr:C0061472 db:inhibitorOfTransporter ge:PA38197.
+dr:C0061472 db:substrateOfTransporter ge:PA35813.
+dr:C0017817 rdfs:hasLabel "Glutathione" .
+dr:C0017817 db:cofactorOfTarget ge:PA28952.
+dr:C0017817 db:cofactorOfTarget ge:PA28954.
+dr:C0017817 db:cofactorOfTarget ge:PA28952.
+dr:C0017817 db:cofactorOfTarget ge:PA28955.
+dr:C0017817 db:cofactorOfTarget ge:PA28949.
+dr:C0017817 db:cofactorOfTarget ge:PA28950.
+dr:C0017817 db:cofactorOfTarget ge:PA28953.
+dr:C0017817 db:cofactorOfTarget ge:PA28951.
+dr:C0017817 db:substrateOfTransporter ge:PA244.
+dr:C0017817 db:inhibitorOfTransporter ge:PA244.
+dr:C0017817 db:substrateOfTransporter ge:PA116.
+dr:C0017817 db:inhibitorOfTransporter ge:PA116.
+dr:C0017817 db:substrateOfTransporter ge:PA376.
+dr:C0017817 db:substrateOfTransporter ge:PA397.
+dr:C0017817 db:substrateOfTransporter ge:PA395.
+dr:C0017890 rdfs:hasLabel "Glycine" .
+dr:C0017890 db:antagonistOfTarget ge:PA28979.
+dr:C0017890 db:substrateOfTransporter ge:PA38197.
+dr:C0017890 db:inhibitorOfTransporter ge:PA38197.
+dr:C0006657 rdfs:hasLabel "Calcidiol" .
+dr:C0006657 db:agonistOfTarget ge:PA37301.
+dr:C0034263 rdfs:hasLabel "Pyridoxal" .
+dr:C0010286 rdfs:hasLabel "Creatine" .
+dr:C0010286 db:ligandOfTarget ge:PA26532.
+dr:C0010286 db:ligandOfTarget ge:PA142672108.
+dr:C0010286 db:ligandOfTarget ge:PA26528.
+dr:C0010286 db:ligandOfTarget ge:PA26534.
+dr:C0010286 db:product ofOfTarget ge:PA28549.
+dr:C0010286 db:inhibitorOfTransporter ge:PA333.
+dr:C0023401 rdfs:hasLabel "L-Leucine" .
+dr:C0023401 db:inhibitorOfTransporter ge:PA38197.
+dr:C0023401 db:substrateOfTransporter ge:PA35814.
+dr:C0041249 rdfs:hasLabel "L-Tryptophan" .
+dr:C0041249 db:inhibitorOfTarget ge:PA37341.
+dr:C0041249 db:inhibitorOfTarget ge:PA37340.
+dr:C0041249 db:inhibitorOfTransporter ge:PA35814.
+dr:C0041249 db:inhibitorOfTransporter ge:PA38197.
+dr:C0010654 rdfs:hasLabel "L-Cysteine" .
+dr:C0010654 db:inhibitorOfTransporter ge:PA38197.
+dr:C0039840 rdfs:hasLabel "Thiamine" .
+dr:C0039840 db:ligandOfTarget ge:PA38235.
+dr:C0039840 db:binderOfTarget ge:PA35825.
+dr:C0039840 db:inhibitorOfTransporter ge:PA331.
+dr:C0039840 db:inhibitorOfTransporter ge:PA329.
+dr:C0039840 db:inhibitorOfTransporter ge:PA333.
+dr:C0014695 rdfs:hasLabel "Ergocalciferol" .
+dr:C0014695 db:agonistOfTarget ge:PA37301.
+dr:C0040005 rdfs:hasLabel "L-Threonine" .
+dr:C0040005 db:inhibitorOfTransporter ge:PA38197.
+dr:C0027289 rdfs:hasLabel "NADH" .
+dr:C0027289 db:binderOfTarget ge:PA166048937.
+dr:C0027289 db:binderOfTarget ge:PA166048938.
+dr:C0027289 db:binderOfTarget ge:PA166048936.
+dr:C0016410 rdfs:hasLabel "Folic Acid" .
+dr:C0016410 db:binderOfTarget ge:PA28209.
+dr:C0016410 db:binderOfTarget ge:PA28211.
+dr:C0016410 db:substrateOfTransporter ge:PA376.
+dr:C0016410 db:substrateOfTransporter ge:PA24393.
+dr:C0016410 db:inhibitorOfTransporter ge:PA397.
+dr:C0016410 db:substrateOfTransporter ge:PA390.
+dr:C0016410 db:substrateOfTransporter ge:PA162403775.
+dr:C0016410 db:substrateOfTransporter ge:PA142670905.
+dr:C0016410 db:inhibitorOfTransporter ge:PA388.
+dr:C0001898 rdfs:hasLabel "L-Alanine" .
+dr:C0001898 db:inhibitorOfTarget ge:PA24372.
+dr:C0001898 db:inhibitorOfTransporter ge:PA38197.
+dr:C0042285 rdfs:hasLabel "L-Valine" .
+dr:C0042285 db:inhibitorOfTransporter ge:PA38197.
+dr:C0042839 rdfs:hasLabel "Vitamin A" .
+dr:C0042874 rdfs:hasLabel "Vitamin E" .
+dr:C0034272 rdfs:hasLabel "Pyridoxine" .
+dr:C0034272 db:ligandOfTarget ge:PA33162.
+dr:C0023791 rdfs:hasLabel "Lipoic Acid" .
+dr:C0022192 rdfs:hasLabel "L-Isoleucine" .
+dr:C0022192 db:inhibitorOfTransporter ge:PA38197.
+dr:C0003999 rdfs:hasLabel "Aspartame" .
+dr:C0003999 db:inducerOfTarget ge:PA37329.
+dr:C0003999 db:agonistOfTarget ge:PA37919.
+dr:C0003999 db:inhibitorOfTransporter ge:PA388.
+dr:C0003999 db:inhibitorOfTransporter ge:PA389.
+dr:C0003999 db:inhibitorOfTransporter ge:PA38295.
+dr:C0008318 rdfs:hasLabel "Cholecalciferol" .
+dr:C0008318 db:agonistOfTarget ge:PA37301.
+dr:C0025270 rdfs:hasLabel "Menadione" .
+dr:C0025270 db:cofactorOfTarget ge:PA28660.
+dr:C0025270 db:cofactorOfTarget ge:PA133787052.
+dr:C0025270 db:cofactorOfTarget ge:PA134931578.
+dr:C0025270 db:activatorOfTarget ge:PA157.
+dr:C0025270 db:activatorOfTarget ge:PA160.
+dr:C0025270 db:activatorOfTarget ge:PA27954.
+dr:C0025270 db:activatorOfTarget ge:PA27940.
+dr:C0025270 db:activatorOfTarget ge:PA33799.
+dr:C0025270 db:activatorOfTarget ge:PA33809.
+dr:C0025270 db:activatorOfTarget ge:PA33813.
+dr:C0025270 db:agonistOfTarget ge:PA25345.
+dr:C0001480 rdfs:hasLabel "Adenosine triphosphate" .
+dr:C0001480 db:inhibitorOfTarget ge:PA24414.
+dr:C0001480 db:inhibitorOfTarget ge:PA24413.
+dr:C0033382 rdfs:hasLabel "L-Proline" .
+dr:C0033382 db:binderOfTarget ge:PA33580.
+dr:C0033382 db:binderOfTarget ge:PA33574.
+dr:C0033382 db:inhibitorOfTransporter ge:PA38197.
+dr:C0001407 rdfs:hasLabel "Adenine" .
+dr:C0003995 rdfs:hasLabel "L-Asparagine" .
+dr:C0003995 db:inhibitorOfTransporter ge:PA38197.
+dr:C0085542 rdfs:hasLabel "Pravastatin" .
+dr:C0085542 db:inhibitorOfTarget ge:PA189.
+dr:C0085542 db:substrateOfTransporter ge:PA134865839.
+dr:C0085542 db:inhibitorOfTransporter ge:PA134865839.
+dr:C0085542 db:substrateOfTransporter ge:PA35845.
+dr:C0085542 db:inhibitorOfTransporter ge:PA35845.
+dr:C0085542 db:substrateOfTransporter ge:PA267.
+dr:C0085542 db:inhibitorOfTransporter ge:PA267.
+dr:C0085542 db:inhibitorOfTransporter ge:PA328.
+dr:C0085542 db:inhibitorOfTransporter ge:PA388.
+dr:C0085542 db:substrateOfTransporter ge:PA389.
+dr:C0085542 db:inhibitorOfTransporter ge:PA389.
+dr:C0085542 db:substrateOfTransporter ge:PA116.
+dr:C0085542 db:inhibitorOfTransporter ge:PA116.
+dr:C0085542 db:inhibitorOfTransporter ge:PA38295.
+dr:C0085542 db:substrateOfTransporter ge:PA390.
+dr:C0085542 db:inhibitorOfTransporter ge:PA390.
+dr:C0085542 db:inhibitorOfTransporter ge:PA35848.
+dr:C0085542 db:substrateOfTransporter ge:PA374.
+dr:C0085542 db:substrateOfTransporter ge:PA35844.
+dr:C0085228 rdfs:hasLabel "Fluvoxamine" .
+dr:C0085228 db:inhibitorOfTarget ge:PA312.
+dr:C0085228 db:inhibitorOfTransporter ge:PA267.
+dr:C0216784 rdfs:hasLabel "Valsartan" .
+dr:C0216784 db:antagonistOfTarget ge:PA43.
+dr:C0216784 db:substrateOfTransporter ge:PA35844.
+dr:C0216784 db:substrateOfTransporter ge:PA134865839.
+dr:C0072973 rdfs:hasLabel "Ramipril" .
+dr:C0072973 db:inhibitorOfTarget ge:PA139.
+dr:C0072973 db:substrateOfTransporter ge:PA323.
+dr:C0072973 db:substrateOfTransporter ge:PA35812.
+dr:C0733397 rdfs:hasLabel "Masoprocol" .
+dr:C0733397 db:inhibitorOfTarget ge:PA46.
+dr:C0060501 rdfs:hasLabel "Flunisolide" .
+dr:C0060501 db:agonistOfTarget ge:PA181.
+dr:C0004609 rdfs:hasLabel "Baclofen" .
+dr:C0004609 db:agonistOfTarget ge:PA28484.
+dr:C0004609 db:agonistOfTarget ge:PA28896.
+dr:C0004609 db:inhibitorOfTransporter ge:PA389.
+dr:C0002658 rdfs:hasLabel "Amphetamine" .
+dr:C0002658 db:inhibitorOfTarget ge:PA325.
+dr:C0002658 db:negative modulatorOfTarget ge:PA311.
+dr:C0002658 db:agonistOfTarget ge:PA162381084.
+dr:C0002658 db:agonistOfTarget ge:PA134921784.
+dr:C0002658 db:inhibitorOfTransporter ge:PA330.
+dr:C0002658 db:inhibitorOfTransporter ge:PA333.
+dr:C0030859 rdfs:hasLabel "Pentagastrin" .
+dr:C0030859 db:agonistOfTarget ge:PA26143.
+dr:C0028040 rdfs:hasLabel "Nicotine" .
+dr:C0028040 db:agonistOfTarget ge:PA26490.
+dr:C0028040 db:agonistOfTarget ge:PA114.
+dr:C0028040 db:agonistOfTarget ge:PA115.
+dr:C0028040 db:agonistOfTarget ge:PA26489.
+dr:C0028040 db:agonistOfTarget ge:PA113.
+dr:C0028040 db:agonistOfTarget ge:PA26491.
+dr:C0028040 db:agonistOfTarget ge:PA26492.
+dr:C0028040 db:agonistOfTarget ge:PA26493.
+dr:C0028040 db:agonistOfTarget ge:PA26488.
+dr:C0028040 db:agonistOfTarget ge:PA26495.
+dr:C0028040 db:agonistOfTarget ge:PA26496.
+dr:C0028040 db:inhibitorOfTransporter ge:PA331.
+dr:C0028040 db:inhibitorOfTransporter ge:PA329.
+dr:C0028040 db:inhibitorOfTransporter ge:PA330.
+dr:C0028040 db:inhibitorOfTransporter ge:PA333.
+dr:C0028040 db:inhibitorOfTransporter ge:PA332.
+dr:C0093437 rdfs:hasLabel "Cevimeline" .
+dr:C0093437 db:agonistOfTarget ge:PA112.
+dr:C0093437 db:agonistOfTarget ge:PA26484.
+dr:C0024002 rdfs:hasLabel "Lorazepam" .
+dr:C0024002 db:potentiatorOfTarget ge:PA28489.
+dr:C0024002 db:potentiatorOfTarget ge:PA28490.
+dr:C0024002 db:potentiatorOfTarget ge:PA28491.
+dr:C0024002 db:potentiatorOfTarget ge:PA28492.
+dr:C0024002 db:potentiatorOfTarget ge:PA28493.
+dr:C0024002 db:potentiatorOfTarget ge:PA28494.
+dr:C0024002 db:potentiatorOfTarget ge:PA28495.
+dr:C0024002 db:potentiatorOfTarget ge:PA28496.
+dr:C0024002 db:potentiatorOfTarget ge:PA28497.
+dr:C0024002 db:potentiatorOfTarget ge:PA28500.
+dr:C0024002 db:potentiatorOfTarget ge:PA28501.
+dr:C0024002 db:potentiatorOfTarget ge:PA28502.
+dr:C0024002 db:potentiatorOfTarget ge:PA28498.
+dr:C0024002 db:potentiatorOfTarget ge:PA28499.
+dr:C0024002 db:potentiatorOfTarget ge:PA28503.
+dr:C0024002 db:potentiatorOfTarget ge:PA28505.
+dr:C0024002 db:potentiatorOfTarget ge:PA28506.
+dr:C0024002 db:potentiatorOfTarget ge:PA134952133.
+dr:C0024002 db:potentiatorOfTarget ge:PA28504.
+dr:C0024002 db:otherOfTarget ge:PA25473.
+dr:C0116569 rdfs:hasLabel "Esmolol" .
+dr:C0116569 db:antagonistOfTarget ge:PA38.
+dr:C1176309 rdfs:hasLabel "Bortezomib" .
+dr:C1176309 db:inhibitorOfTarget ge:PA33905.
+dr:C1176309 db:antagonistOfTarget ge:PA33882.
+dr:C1176309 db:antagonistOfTarget ge:PA33887.
+dr:C1176309 db:antagonistOfTarget ge:PA33884.
+dr:C1176309 db:inhibitorOfTarget ge:PA33899.
+dr:C1176309 db:inhibitorOfTransporter ge:PA118.
+dr:C0014987 rdfs:hasLabel "Ethchlorvynol" .
+dr:C0014987 db:agonistOfTarget ge:PA28489.
+dr:C0014987 db:agonistOfTarget ge:PA28495.
+dr:C0014987 db:agonistOfTarget ge:PA28490.
+dr:C0014987 db:agonistOfTarget ge:PA28496.
+dr:C0014987 db:agonistOfTarget ge:PA28491.
+dr:C0014987 db:agonistOfTarget ge:PA28497.
+dr:C0014987 db:agonistOfTarget ge:PA28492.
+dr:C0014987 db:agonistOfTarget ge:PA28493.
+dr:C0014987 db:agonistOfTarget ge:PA28494.
+dr:C0006982 rdfs:hasLabel "Carbidopa" .
+dr:C0006982 db:inhibitorOfTarget ge:PA140.
+dr:C0031447 rdfs:hasLabel "Phentermine" .
+dr:C0031447 db:inhibitorOfTarget ge:PA310.
+dr:C0031447 db:inhibitorOfTarget ge:PA312.
+dr:C0031447 db:inhibitorOfTarget ge:PA311.
+dr:C0031447 db:antagonistOfTarget ge:PA236.
+dr:C0031447 db:antagonistOfTarget ge:PA237.
+dr:C0063455 rdfs:hasLabel "Indecainide" .
+dr:C0063455 db:inhibitorOfTarget ge:PA304.
+dr:C0040610 rdfs:hasLabel "Tramadol" .
+dr:C0040610 db:agonistOfTarget ge:PA31945.
+dr:C0040610 db:inhibitorOfTarget ge:PA310.
+dr:C0040610 db:inhibitorOfTarget ge:PA312.
+dr:C0040610 db:antagonistOfTarget ge:PA194.
+dr:C0040610 db:agonistOfTarget ge:PA31943.
+dr:C0040610 db:agonistOfTarget ge:PA31942.
+dr:C0040610 db:antagonistOfTarget ge:PA28983.
+dr:C0040610 db:antagonistOfTarget ge:PA26483.
+dr:C0040610 db:antagonistOfTarget ge:PA112.
+dr:C0042646 rdfs:hasLabel "Vidarabine" .
+dr:C0005320 rdfs:hasLabel "Betaxolol" .
+dr:C0005320 db:antagonistOfTarget ge:PA38.
+dr:C0005320 db:antagonistOfTarget ge:PA39.
+dr:C0016277 rdfs:hasLabel "Fluconazole" .
+dr:C0016277 db:inhibitorOfTransporter ge:PA267.
+dr:C0245514 rdfs:hasLabel "Troglitazone" .
+dr:C0245514 db:agonistOfTarget ge:PA281.
+dr:C0245514 db:inhibitorOfTarget ge:PA27968.
+dr:C0245514 db:antagonistOfTarget ge:PA261.
+dr:C0245514 db:inhibitorOfTarget ge:PA154.
+dr:C0245514 db:inverse agonistOfTarget ge:PA27891.
+dr:C0245514 db:inverse agonistOfTarget ge:PA27887.
+dr:C0245514 db:inhibitorOfTransporter ge:PA374.
+dr:C0245514 db:inhibitorOfTransporter ge:PA134865839.
+dr:C0874161 rdfs:hasLabel "Oseltamivir" .
+dr:C0874161 db:inhibitorOfTarget ge:PA31429.
+dr:C0874161 db:otherOfTarget ge:PA107.
+dr:C0874161 db:inhibitorOfTarget ge:PA31560.
+dr:C0874161 db:inhibitorOfTarget ge:PA31561.
+dr:C0874161 db:substrateOfTransporter ge:PA397.
+dr:C0874161 db:substrateOfTransporter ge:PA323.
+dr:C0874161 db:substrateOfTransporter ge:PA389.
+dr:C0014806 rdfs:hasLabel "Erythromycin" .
+dr:C0014806 db:substrateOfTransporter ge:PA267.
+dr:C0014806 db:inhibitorOfTransporter ge:PA267.
+dr:C0014806 db:inducerOfTransporter ge:PA267.
+dr:C0014806 db:inhibitorOfTransporter ge:PA244.
+dr:C0014806 db:inhibitorOfTransporter ge:PA328.
+dr:C0014806 db:inhibitorOfTransporter ge:PA35848.
+dr:C0020316 rdfs:hasLabel "Hydroxocobalamin" .
+dr:C0020316 db:cofactorOfTarget ge:PA31272.
+dr:C0020316 db:cofactorOfTarget ge:PA31327.
+dr:C0020316 db:otherOfTarget ge:PA31277.
+dr:C0020316 db:other/unknownOfTarget ge:PA134912808.
+dr:C0020316 db:otherOfTarget ge:PA36403.
+dr:C0020316 db:otherOfTarget ge:PA134962814.
+dr:C0020316 db:otherOfTarget ge:PA27044.
+dr:C0020316 db:otherOfTarget ge:PA134864025.
+dr:C0020316 db:other/unknownOfTarget ge:PA142671348.
+dr:C0006644 rdfs:hasLabel "Caffeine" .
+dr:C0006644 db:antagonistOfTarget ge:PA24583.
+dr:C0006644 db:multitargetOfTarget ge:PA24583.
+dr:C0006644 db:antagonistOfTarget ge:PA24584.
+dr:C0006644 db:multitargetOfTarget ge:PA24584.
+dr:C0006644 db:inhibitorOfTarget ge:PA33129.
+dr:C0006644 db:substrateOfTransporter ge:PA267.
+dr:C0006644 db:inhibitorOfTransporter ge:PA267.
+dr:C0038627 rdfs:hasLabel "Succinylcholine" .
+dr:C0038627 db:agonistOfTarget ge:PA26488.
+dr:C0038627 db:agonistOfTarget ge:PA26483.
+dr:C0038627 db:agonistOfTarget ge:PA26484.
+dr:C0038627 db:agonistOfTarget ge:PA111.
+dr:C0038627 db:agonistOfTarget ge:PA112.
+dr:C0529793 rdfs:hasLabel "Sildenafil" .
+dr:C0529793 db:inhibitorOfTarget ge:PA33132.
+dr:C0529793 db:inhibitorOfTarget ge:PA33137.
+dr:C0529793 db:inhibitorOfTarget ge:PA33138.
+dr:C0529793 db:inhibitorOfTransporter ge:PA397.
+dr:C0529793 db:inhibitorOfTransporter ge:PA395.
+dr:C0529793 db:inhibitorOfTransporter ge:PA24392.
+dr:C0114771 rdfs:hasLabel "Dofetilide" .
+dr:C0114771 db:inhibitorOfTarget ge:PA212.
+dr:C0114771 db:inhibitorOfTarget ge:PA30059.
+dr:C0114771 db:inhibitorOfTarget ge:PA218.
+dr:C0034283 rdfs:hasLabel "Pyrimethamine" .
+dr:C0034283 db:inhibitorOfTarget ge:PA143.
+dr:C0035179 rdfs:hasLabel "Reserpine" .
+dr:C0035179 db:inhibitorOfTarget ge:PA325.
+dr:C0035179 db:substrateOfTransporter ge:PA267.
+dr:C0035179 db:inhibitorOfTransporter ge:PA267.
+dr:C0035179 db:inducerOfTransporter ge:PA267.
+dr:C0035179 db:inhibitorOfTransporter ge:PA329.
+dr:C0035179 db:inhibitorOfTransporter ge:PA374.
+dr:C0035179 db:inhibitorOfTransporter ge:PA116.
+dr:C0035179 db:substrateOfTransporter ge:PA331.
+dr:C0052796 rdfs:hasLabel "Azithromycin" .
+dr:C0052796 db:inhibitorOfTransporter ge:PA267.
+dr:C0040207 rdfs:hasLabel "Ticlopidine" .
+dr:C0040207 db:antagonistOfTarget ge:PA134971947.
+dr:C0165631 rdfs:hasLabel "Adapalene" .
+dr:C0165631 db:agonistOfTarget ge:PA34227.
+dr:C0165631 db:agonistOfTarget ge:PA34226.
+dr:C0165631 db:agonistOfTarget ge:PA34892.
+dr:C0165631 db:agonistOfTarget ge:PA34891.
+dr:C0165631 db:agonistOfTarget ge:PA34225.
+dr:C0165631 db:other/unknownOfTarget ge:PA34890.
+dr:C0026078 rdfs:hasLabel "Midodrine" .
+dr:C0026078 db:agonistOfTarget ge:PA34.
+dr:C0026078 db:agonistOfTarget ge:PA33.
+dr:C0209499 rdfs:hasLabel "Remikiren" .
+dr:C0209499 db:inhibitorOfTarget ge:PA297.
+dr:C0081876 rdfs:hasLabel "Pantoprazole" .
+dr:C0081876 db:inhibitorOfTarget ge:PA25113.
+dr:C0081876 db:inhibitorOfTransporter ge:PA267.
+dr:C0081876 db:inhibitorOfTransporter ge:PA390.
+dr:C0081876 db:inhibitorOfTransporter ge:PA134865839.
+dr:C0076840 rdfs:hasLabel "Torasemide" .
+dr:C0076840 db:inhibitorOfTarget ge:PA320.
+dr:C0008845 rdfs:hasLabel "Citalopram" .
+dr:C0008845 db:inhibitorOfTarget ge:PA312.
+dr:C0008845 db:binderOfTarget ge:PA29456.
+dr:C0008845 db:binderOfTarget ge:PA34.
+dr:C0008845 db:binderOfTarget ge:PA26484.
+dr:C0008845 db:substrateOfTransporter ge:PA267.
+dr:C0008845 db:inhibitorOfTransporter ge:PA267.
+dr:C0008845 db:substrateOfTransporter ge:PA311.
+dr:C0008845 db:inhibitorOfTransporter ge:PA311.
+dr:C0008845 db:substrateOfTransporter ge:PA310.
+dr:C0008845 db:inhibitorOfTransporter ge:PA310.
+dr:C0008845 db:substrateOfTransporter ge:PA312.
+dr:C0008845 db:inhibitorOfTransporter ge:PA312.
+dr:C0759933 rdfs:hasLabel "Eletriptan" .
+dr:C0759933 db:agonistOfTarget ge:PA29550.
+dr:C0759933 db:agonistOfTarget ge:PA29549.
+dr:C0759933 db:agonistOfTarget ge:PA29553.
+dr:C0759933 db:agonistOfTarget ge:PA192.
+dr:C0759933 db:agonistOfTarget ge:PA29552.
+dr:C0759933 db:agonistOfTarget ge:PA29554.
+dr:C0759933 db:agonistOfTarget ge:PA29561.
+dr:C0759933 db:substrateOfTransporter ge:PA267.
+dr:C0005324 rdfs:hasLabel "Bethanidine" .
+dr:C0005324 db:agonistOfTarget ge:PA37.
+dr:C0005324 db:agonistOfTarget ge:PA35.
+dr:C0005324 db:agonistOfTarget ge:PA36.
+dr:C0005324 db:inhibitorOfTarget ge:PA213.
+dr:C0536495 rdfs:hasLabel "Moxifloxacin" .
+dr:C0536495 db:inhibitorOfTarget ge:PA354.
+dr:C0030082 rdfs:hasLabel "Oxyphenonium" .
+dr:C0030082 db:antagonistOfTarget ge:PA26484.
+dr:C0525005 rdfs:hasLabel "Nelfinavir" .
+dr:C0525005 db:substrateOfTransporter ge:PA267.
+dr:C0525005 db:inhibitorOfTransporter ge:PA267.
+dr:C0525005 db:inducerOfTransporter ge:PA267.
+dr:C0525005 db:inhibitorOfTransporter ge:PA329.
+dr:C0525005 db:inhibitorOfTransporter ge:PA328.
+dr:C0525005 db:inhibitorOfTransporter ge:PA390.
+dr:C0525005 db:inhibitorOfTransporter ge:PA134865839.
+dr:C0022176 rdfs:hasLabel "Isoetharine" .
+dr:C0022176 db:agonistOfTarget ge:PA38.
+dr:C0061323 rdfs:hasLabel "Glimepiride" .
+dr:C0061323 db:inhibitorOfTarget ge:PA217.
+dr:C0061323 db:inhibitorOfTarget ge:PA213.
+dr:C0061323 db:inducerOfTarget ge:PA24395.
+dr:C0304612 rdfs:hasLabel "Diflorasone" .
+dr:C0304612 db:agonistOfTarget ge:PA181.
+dr:C0376637 rdfs:hasLabel "Indinavir" .
+dr:C0376637 db:substrateOfTransporter ge:PA267.
+dr:C0376637 db:inhibitorOfTransporter ge:PA267.
+dr:C0376637 db:inducerOfTransporter ge:PA267.
+dr:C0376637 db:inhibitorOfTransporter ge:PA329.
+dr:C0376637 db:inhibitorOfTransporter ge:PA244.
+dr:C0376637 db:inhibitorOfTransporter ge:PA328.
+dr:C0376637 db:inhibitorOfTransporter ge:PA134865839.
+dr:C0376637 db:substrateOfTransporter ge:PA116.
+dr:C0082646 rdfs:hasLabel "Gadodiamide" .
+dr:C0304525 rdfs:hasLabel "Guanadrel Sulfate" .
+dr:C0304525 db:partial agonistOfTarget ge:PA310.
+dr:C0024027 rdfs:hasLabel "Lovastatin" .
+dr:C0024027 db:inhibitorOfTarget ge:PA189.
+dr:C0024027 db:other/unknownOfTarget ge:PA29948.
+dr:C0024027 db:otherOfTarget ge:PA29227.
+dr:C0024027 db:inhibitorOfTransporter ge:PA267.
+dr:C0024027 db:inhibitorOfTransporter ge:PA328.
+dr:C0024027 db:inhibitorOfTransporter ge:PA134865839.
+dr:C0024027 db:substrateOfTransporter ge:PA116.
+dr:C0014277 rdfs:hasLabel "Enflurane" .
+dr:C0014277 db:inhibitorOfTarget ge:PA220.
+dr:C0014277 db:agonistOfTarget ge:PA28489.
+dr:C0014277 db:antagonistOfTarget ge:PA28966.
+dr:C0014277 db:agonistOfTarget ge:PA28727.
+dr:C0014277 db:inducerOfTarget ge:PA30019.
+dr:C0014277 db:inhibitorOfTarget ge:PA25111.
+dr:C0014277 db:other/unknownOfTarget ge:PA25127.
+dr:C0014277 db:unknownOfTarget ge:PA166048936.
+dr:C0007556 rdfs:hasLabel "Cefotiam" .
+dr:C0007556 db:inhibitorOfTransporter ge:PA388.
+dr:C0657912 rdfs:hasLabel "Pregabalin" .
+dr:C0657912 db:inhibitorOfTarget ge:PA26007.
+dr:C0657912 db:OtherOfTransporter ge:PA35826.
+dr:C0039468 rdfs:hasLabel "Temazepam" .
+dr:C0039468 db:potentiatorOfTarget ge:PA28489.
+dr:C0039468 db:potentiatorOfTarget ge:PA28490.
+dr:C0039468 db:potentiatorOfTarget ge:PA28491.
+dr:C0039468 db:potentiatorOfTarget ge:PA28492.
+dr:C0039468 db:potentiatorOfTarget ge:PA28493.
+dr:C0039468 db:potentiatorOfTarget ge:PA28494.
+dr:C0039468 db:potentiatorOfTarget ge:PA28495.
+dr:C0039468 db:potentiatorOfTarget ge:PA28496.
+dr:C0039468 db:potentiatorOfTarget ge:PA28497.
+dr:C0039468 db:potentiatorOfTarget ge:PA28500.
+dr:C0039468 db:potentiatorOfTarget ge:PA28501.
+dr:C0039468 db:potentiatorOfTarget ge:PA28502.
+dr:C0039468 db:potentiatorOfTarget ge:PA28498.
+dr:C0039468 db:potentiatorOfTarget ge:PA28499.
+dr:C0039468 db:potentiatorOfTarget ge:PA28503.
+dr:C0039468 db:potentiatorOfTarget ge:PA28505.
+dr:C0039468 db:potentiatorOfTarget ge:PA28506.
+dr:C0039468 db:potentiatorOfTarget ge:PA134952133.
+dr:C0039468 db:potentiatorOfTarget ge:PA28504.
+dr:C0039468 db:otherOfTarget ge:PA25473.
+dr:C0025696 rdfs:hasLabel "Methyclothiazide" .
+dr:C0025696 db:inhibitorOfTarget ge:PA320.
+dr:C0025696 db:inhibitorOfTarget ge:PA25984.
+dr:C0025696 db:inhibitorOfTarget ge:PA25989.
+dr:C0025696 db:inhibitorOfTarget ge:PA25991.
+dr:C0030125 rdfs:hasLabel "Aminosalicylic Acid" .
+dr:C0030125 db:inhibitorOfTarget ge:PA293.
+dr:C0030125 db:inhibitorOfTarget ge:PA26510.
+dr:C0030125 db:inhibitorOfTarget ge:PA46.
+dr:C0030125 db:unknownOfTarget ge:PA134889019.
+dr:C0168388 rdfs:hasLabel "Reboxetine" .
+dr:C0168388 db:inhibitorOfTarget ge:PA310.
+dr:C0168388 db:inhibitorOfTransporter ge:PA267.
+dr:C0128513 rdfs:hasLabel "Milrinone" .
+dr:C0128513 db:inhibitorOfTarget ge:PA33126.
+dr:C0031965 rdfs:hasLabel "Pipobroman" .
+dr:C0006464 rdfs:hasLabel "Butabarbital" .
+dr:C0006464 db:potentiatorOfTarget ge:PA28489.
+dr:C0006464 db:potentiatorOfTarget ge:PA28490.
+dr:C0006464 db:potentiatorOfTarget ge:PA28491.
+dr:C0006464 db:potentiatorOfTarget ge:PA28492.
+dr:C0006464 db:potentiatorOfTarget ge:PA28493.
+dr:C0006464 db:potentiatorOfTarget ge:PA28494.
+dr:C0006464 db:antagonistOfTarget ge:PA26490.
+dr:C0006464 db:antagonistOfTarget ge:PA114.
+dr:C0006464 db:antagonistOfTarget ge:PA28967.
+dr:C0006464 db:antagonistOfTarget ge:PA164741600.
+dr:C0132326 rdfs:hasLabel "Nevirapine" .
+dr:C0069765 rdfs:hasLabel "Oxiconazole" .
+dr:C0054234 rdfs:hasLabel "Butalbital" .
+dr:C0054234 db:potentiatorOfTarget ge:PA28489.
+dr:C0054234 db:potentiatorOfTarget ge:PA28490.
+dr:C0054234 db:potentiatorOfTarget ge:PA28491.
+dr:C0054234 db:potentiatorOfTarget ge:PA28492.
+dr:C0054234 db:potentiatorOfTarget ge:PA28493.
+dr:C0054234 db:potentiatorOfTarget ge:PA28494.
+dr:C0054234 db:antagonistOfTarget ge:PA26490.
+dr:C0054234 db:antagonistOfTarget ge:PA114.
+dr:C0054234 db:antagonistOfTarget ge:PA28967.
+dr:C0054234 db:antagonistOfTarget ge:PA164741600.
+dr:C0092801 rdfs:hasLabel "Cladribine" .
+dr:C0092801 db:inhibitorOfTarget ge:PA298.
+dr:C0092801 db:inhibitorOfTarget ge:PA299.
+dr:C0092801 db:inhibitorOfTarget ge:PA34866.
+dr:C0092801 db:inhibitorOfTarget ge:PA162399856.
+dr:C0092801 db:inhibitorOfTarget ge:PA277.
+dr:C0092801 db:inhibitorOfTarget ge:PA278.
+dr:C0092801 db:inhibitorOfTarget ge:PA33499.
+dr:C0092801 db:inhibitorOfTarget ge:PA38677.
+dr:C0092801 db:inducerOfTarget ge:PA31694.
+dr:C0092801 db:substrateOfTransporter ge:PA331.
+dr:C0092801 db:substrateOfTransporter ge:PA329.
+dr:C0092801 db:substrateOfTransporter ge:PA390.
+dr:C0073633 rdfs:hasLabel "Ranolazine" .
+dr:C0073633 db:inhibitorOfTarget ge:PA304.
+dr:C0073633 db:inhibitorOfTarget ge:PA35010.
+dr:C0127615 rdfs:hasLabel "Mesalazine" .
+dr:C0127615 db:inhibitorOfTarget ge:PA293.
+dr:C0127615 db:inhibitorOfTarget ge:PA24346.
+dr:C0127615 db:inhibitorOfTarget ge:PA46.
+dr:C0127615 db:agonistOfTarget ge:PA281.
+dr:C0127615 db:inhibitorOfTarget ge:PA26510.
+dr:C0127615 db:inhibitorOfTarget ge:PA29776.
+dr:C0005098 rdfs:hasLabel "Benzatropine" .
+dr:C0005098 db:antagonistOfTarget ge:PA26484.
+dr:C0005098 db:inhibitorOfTarget ge:PA311.
+dr:C0005098 db:antagonistOfTarget ge:PA29456.
+dr:C0380393 rdfs:hasLabel "Ziprasidone" .
+dr:C0380393 db:antagonistOfTarget ge:PA27478.
+dr:C0380393 db:antagonistOfTarget ge:PA193.
+dr:C0380393 db:antagonistOfTarget ge:PA147.
+dr:C0380393 db:antagonistOfTarget ge:PA148.
+dr:C0380393 db:antagonistOfTarget ge:PA27479.
+dr:C0380393 db:antagonistOfTarget ge:PA27480.
+dr:C0380393 db:antagonistOfTarget ge:PA192.
+dr:C0380393 db:antagonistOfTarget ge:PA29549.
+dr:C0380393 db:antagonistOfTarget ge:PA29550.
+dr:C0380393 db:antagonistOfTarget ge:PA29552.
+dr:C0380393 db:antagonistOfTarget ge:PA194.
+dr:C0380393 db:antagonistOfTarget ge:PA29555.
+dr:C0380393 db:antagonistOfTarget ge:PA29560.
+dr:C0380393 db:antagonistOfTarget ge:PA29561.
+dr:C0380393 db:antagonistOfTarget ge:PA29456.
+dr:C0380393 db:antagonistOfTarget ge:PA34.
+dr:C0380393 db:antagonistOfTarget ge:PA33.
+dr:C0380393 db:antagonistOfTarget ge:PA35.
+dr:C0380393 db:antagonistOfTarget ge:PA36.
+dr:C0380393 db:antagonistOfTarget ge:PA37.
+dr:C0380393 db:antagonistOfTarget ge:PA26484.
+dr:C0380393 db:antagonistOfTarget ge:PA111.
+dr:C0380393 db:antagonistOfTarget ge:PA112.
+dr:C0380393 db:antagonistOfTarget ge:PA26485.
+dr:C0380393 db:antagonistOfTarget ge:PA26486.
+dr:C0025842 rdfs:hasLabel "Methysergide" .
+dr:C0025842 db:antagonistOfTarget ge:PA29554.
+dr:C0025842 db:antagonistOfTarget ge:PA194.
+dr:C0025842 db:antagonistOfTarget ge:PA193.
+dr:C0025842 db:agonistOfTarget ge:PA192.
+dr:C0025842 db:antagonistOfTarget ge:PA29561.
+dr:C0107994 rdfs:hasLabel "Cabergoline" .
+dr:C0107994 db:agonistOfTarget ge:PA27478.
+dr:C0107994 db:agonistOfTarget ge:PA29554.
+dr:C0107994 db:agonistOfTarget ge:PA27479.
+dr:C0107994 db:agonistOfTarget ge:PA193.
+dr:C0107994 db:antagonistOfTarget ge:PA36.
+dr:C0107994 db:agonistOfTarget ge:PA29550.
+dr:C0107994 db:agonistOfTarget ge:PA27480.
+dr:C0107994 db:antagonistOfTarget ge:PA35.
+dr:C0107994 db:agonistOfTarget ge:PA192.
+dr:C0107994 db:antagonistOfTarget ge:PA37.
+dr:C0107994 db:agonistOfTarget ge:PA148.
+dr:C0107994 db:agonistOfTarget ge:PA147.
+dr:C0107994 db:agonistOfTarget ge:PA29549.
+dr:C0107994 db:agonistOfTarget ge:PA194.
+dr:C0107994 db:antagonistOfTarget ge:PA29561.
+dr:C0020811 rdfs:hasLabel "Idoxuridine" .
+dr:C0010980 rdfs:hasLabel "Dapsone" .
+dr:C0076115 rdfs:hasLabel "Terconazole" .
+dr:C0031507 rdfs:hasLabel "Phenytoin" .
+dr:C0031507 db:inhibitorOfTarget ge:PA304.
+dr:C0031507 db:inhibitorOfTarget ge:PA301.
+dr:C0031507 db:inhibitorOfTransporter ge:PA37815.
+dr:C0031507 db:substrateOfTransporter ge:PA267.
+dr:C0031507 db:substrateOfTransporter ge:PA116.
+dr:C0065865 rdfs:hasLabel "Medrysone" .
+dr:C0065865 db:agonistOfTarget ge:PA181.
+dr:C0013090 rdfs:hasLabel "Doxycycline" .
+dr:C0013090 db:inhibitorOfTransporter ge:PA388.
+dr:C0013090 db:inhibitorOfTransporter ge:PA389.
+dr:C0013090 db:inhibitorOfTransporter ge:PA38295.
+dr:C0012203 rdfs:hasLabel "Diethylstilbestrol" .
+dr:C0012203 db:agonistOfTarget ge:PA156.
+dr:C0012203 db:agonistOfTarget ge:PA27891.
+dr:C0012203 db:agonistOfTarget ge:PA27886.
+dr:C0012203 db:inhibitorOfTransporter ge:PA390.
+dr:C0012203 db:substrateOfTransporter ge:PA267.
+dr:C0024200 rdfs:hasLabel "Lymecycline" .
+dr:C0009074 rdfs:hasLabel "Clotrimazole" .
+dr:C0009074 db:inhibitorOfTarget ge:PA222.
+dr:C0009074 db:inducerOfTransporter ge:PA376.
+dr:C0009074 db:inhibitorOfTransporter ge:PA267.
+dr:C0009074 db:inducerOfTransporter ge:PA267.
+dr:C0009074 db:inducerOfTransporter ge:PA116.
+dr:C0717537 rdfs:hasLabel "Calcium Acetate" .
+dr:C0038702 rdfs:hasLabel "Sulfanilamide" .
+dr:C0010590 rdfs:hasLabel "Cycloserine" .
+dr:C0051809 rdfs:hasLabel "Anagrelide" .
+dr:C0051809 db:inhibitorOfTarget ge:PA33126.
+dr:C0007257 rdfs:hasLabel "Carmustine" .
+dr:C0007257 db:inhibitorOfTarget ge:PA29014.
+dr:C0038745 rdfs:hasLabel "Sulfisoxazole" .
+dr:C0025859 rdfs:hasLabel "Metoprolol" .
+dr:C0025859 db:antagonistOfTarget ge:PA38.
+dr:C0025859 db:antagonistOfTarget ge:PA39.
+dr:C0025859 db:inhibitorOfTransporter ge:PA331.
+dr:C0025859 db:substrateOfTransporter ge:PA267.
+dr:C0025859 db:inhibitorOfTransporter ge:PA267.
+dr:C0056519 rdfs:hasLabel "Crotamiton" .
+dr:C0005640 rdfs:hasLabel "Dicumarol" .
+dr:C0005640 db:inhibitorOfTarget ge:PA133787052.
+dr:C0005640 db:inhibitorOfTarget ge:PA31744.
+dr:C0005640 db:inhibitorOfTarget ge:PA26925.
+dr:C0007549 rdfs:hasLabel "Cefmenoxime" .
+dr:C0244821 rdfs:hasLabel "Ropinirole" .
+dr:C0244821 db:agonistOfTarget ge:PA27479.
+dr:C0244821 db:agonistOfTarget ge:PA27478.
+dr:C0244821 db:agonistOfTarget ge:PA27480.
+dr:C0244821 db:agonistOfTarget ge:PA192.
+dr:C0244821 db:agonistOfTarget ge:PA29550.
+dr:C0244821 db:agonistOfTarget ge:PA29554.
+dr:C0244821 db:agonistOfTarget ge:PA147.
+dr:C0244821 db:agonistOfTarget ge:PA148.
+dr:C0244821 db:agonistOfTarget ge:PA29549.
+dr:C0244821 db:agonistOfTarget ge:PA193.
+dr:C0244821 db:agonistOfTarget ge:PA194.
+dr:C0244821 db:agonistOfTarget ge:PA35.
+dr:C0244821 db:agonistOfTarget ge:PA36.
+dr:C0244821 db:agonistOfTarget ge:PA37.
+dr:C0008275 rdfs:hasLabel "Chlorotrianisene" .
+dr:C0008275 db:agonistOfTarget ge:PA156.
+dr:C0071304 rdfs:hasLabel "Isradipine" .
+dr:C0071304 db:inhibitorOfTarget ge:PA83.
+dr:C0071304 db:inhibitorOfTarget ge:PA86.
+dr:C0071304 db:inhibitorOfTarget ge:PA88.
+dr:C0071304 db:inhibitorOfTarget ge:PA380.
+dr:C0071304 db:inhibitorOfTarget ge:PA26012.
+dr:C0071304 db:inhibitorOfTarget ge:PA84.
+dr:C0071304 db:inhibitorOfTarget ge:PA85.
+dr:C0012004 rdfs:hasLabel "Diatrizoate" .
+dr:C0005321 rdfs:hasLabel "Betazole" .
+dr:C0005321 db:agonistOfTarget ge:PA29457.
+dr:C0076829 rdfs:hasLabel "Topiramate" .
+dr:C0076829 db:agonistOfTarget ge:PA28489.
+dr:C0076829 db:inhibitorOfTarget ge:PA301.
+dr:C0076829 db:antagonistOfTarget ge:PA28973.
+dr:C0076829 db:inhibitorOfTarget ge:PA25989.
+dr:C0076829 db:inhibitorOfTarget ge:PA25991.
+dr:C0007550 rdfs:hasLabel "Cefmetazole" .
+dr:C0007550 db:inhibitorOfTransporter ge:PA323.
+dr:C0007550 db:inhibitorOfTransporter ge:PA35812.
+dr:C1098320 rdfs:hasLabel "Olmesartan" .
+dr:C1098320 db:antagonistOfTarget ge:PA43.
+dr:C1098320 db:substrateOfTransporter ge:PA116.
+dr:C1098320 db:inducerOfTransporter ge:PA116.
+dr:C1098320 db:substrateOfTransporter ge:PA35844.
+dr:C1098320 db:substrateOfTransporter ge:PA134865839.
+dr:C0002699 rdfs:hasLabel "Amsacrine" .
+dr:C0002699 db:inhibitorOfTarget ge:PA354.
+dr:C0002699 db:inhibitorOfTarget ge:PA212.
+dr:C0002699 db:inhibitorOfTransporter ge:PA267.
+dr:C0039771 rdfs:hasLabel "Theophylline" .
+dr:C0039771 db:antagonistOfTarget ge:PA24583.
+dr:C0039771 db:antagonistOfTarget ge:PA24584.
+dr:C0039771 db:antagonistOfTarget ge:PA24585.
+dr:C0039771 db:inhibitorOfTarget ge:PA33129.
+dr:C0039771 db:inhibitorOfTarget ge:PA33132.
+dr:C0039771 db:inhibitorOfTarget ge:PA33128.
+dr:C0039771 db:inhibitorOfTarget ge:PA33126.
+dr:C0039771 db:activatorOfTarget ge:PA29227.
+dr:C0039771 db:inhibitorOfTransporter ge:PA35848.
+dr:C0048470 rdfs:hasLabel "Argatroban" .
+dr:C0048470 db:inhibitorOfTarget ge:PA157.
+dr:C0041014 rdfs:hasLabel "Liothyronine" .
+dr:C0041014 db:agonistOfTarget ge:PA36507.
+dr:C0041014 db:agonistOfTarget ge:PA36508.
+dr:C0041014 db:substrateOfTransporter ge:PA328.
+dr:C0041014 db:substrateOfTransporter ge:PA134865839.
+dr:C0041014 db:substrateOfTransporter ge:PA35844.
+dr:C0041014 db:substrateOfTransporter ge:PA134892408.
+dr:C0041014 db:substrateOfTransporter ge:PA317.
+dr:C0041014 db:substrateOfTransporter ge:PA37815.
+dr:C0041014 db:inhibitorOfTransporter ge:PA37815.
+dr:C0041014 db:substrateOfTransporter ge:PA35838.
+dr:C0041014 db:inhibitorOfTransporter ge:PA35838.
+dr:C0041014 db:inhibitorOfTransporter ge:PA389.
+dr:C0041014 db:inhibitorOfTransporter ge:PA38197.
+dr:C0041014 db:inducerOfTransporter ge:PA267.
+dr:C0012702 rdfs:hasLabel "Disopyramide" .
+dr:C0012702 db:inhibitorOfTarget ge:PA304.
+dr:C0012702 db:antagonistOfTarget ge:PA26484.
+dr:C0012702 db:antagonistOfTarget ge:PA111.
+dr:C0012702 db:antagonistOfTarget ge:PA112.
+dr:C0012702 db:inhibitorOfTarget ge:PA30030.
+dr:C0012702 db:inhibitorOfTarget ge:PA210.
+dr:C0012702 db:inhibitorOfTransporter ge:PA329.
+dr:C0012702 db:inhibitorOfTransporter ge:PA331.
+dr:C0023660 rdfs:hasLabel "Lidocaine" .
+dr:C0023660 db:inhibitorOfTarget ge:PA35000.
+dr:C0023660 db:inhibitorOfTarget ge:PA35010.
+dr:C0023660 db:inhibitorOfTarget ge:PA304.
+dr:C0023660 db:antagonistOfTarget ge:PA7360.
+dr:C0023660 db:inhibitorOfTransporter ge:PA333.
+dr:C0023660 db:inhibitorOfTransporter ge:PA267.
+dr:C0043603 rdfs:hasLabel "Pamidronate" .
+dr:C0043603 db:inhibitorOfTarget ge:PA28075.
+dr:C0008929 rdfs:hasLabel "Clemastine" .
+dr:C0008929 db:antagonistOfTarget ge:PA29456.
+dr:C0050393 rdfs:hasLabel "Acarbose" .
+dr:C0050393 db:inhibitorOfTarget ge:PA30778.
+dr:C0050393 db:inhibitorOfTarget ge:PA24784.
+dr:C0050393 db:inhibitorOfTarget ge:PA28476.
+dr:C0050393 db:inhibitorOfTarget ge:PA35758.
+dr:C0078569 rdfs:hasLabel "Venlafaxine" .
+dr:C0078569 db:inhibitorOfTarget ge:PA312.
+dr:C0078569 db:inhibitorOfTarget ge:PA310.
+dr:C0078569 db:inhibitorOfTarget ge:PA311.
+dr:C0078569 db:substrateOfTransporter ge:PA267.
+dr:C0078569 db:inhibitorOfTransporter ge:PA267.
+dr:C0078569 db:inducerOfTransporter ge:PA390.
+dr:C0014938 rdfs:hasLabel "Conjugated Estrogens" .
+dr:C0014938 db:agonistOfTarget ge:PA156.
+dr:C0014938 db:inhibitorOfTransporter ge:PA376.
+dr:C0014938 db:inhibitorOfTransporter ge:PA397.
+dr:C0014938 db:inhibitorOfTransporter ge:PA244.
+dr:C0014938 db:substrateOfTransporter ge:PA328.
+dr:C0014938 db:inhibitorOfTransporter ge:PA328.
+dr:C0014938 db:inhibitorOfTransporter ge:PA317.
+dr:C0014938 db:inhibitorOfTransporter ge:PA38283.
+dr:C0014938 db:substrateOfTransporter ge:PA389.
+dr:C0014938 db:inhibitorOfTransporter ge:PA389.
+dr:C0014938 db:substrateOfTransporter ge:PA37815.
+dr:C0014938 db:inhibitorOfTransporter ge:PA37815.
+dr:C0014938 db:substrateOfTransporter ge:PA134865839.
+dr:C0014938 db:inhibitorOfTransporter ge:PA134865839.
+dr:C0014938 db:substrateOfTransporter ge:PA35845.
+dr:C0014938 db:substrateOfTransporter ge:PA267.
+dr:C0014938 db:substrateOfTransporter ge:PA388.
+dr:C0014938 db:substrateOfTransporter ge:PA116.
+dr:C0014938 db:substrateOfTransporter ge:PA35838.
+dr:C0014938 db:substrateOfTransporter ge:PA24393.
+dr:C0014938 db:substrateOfTransporter ge:PA35844.
+dr:C0014938 db:substrateOfTransporter ge:PA38295.
+dr:C0014938 db:substrateOfTransporter ge:PA35837.
+dr:C0014938 db:substrateOfTransporter ge:PA390.
+dr:C0937916 rdfs:hasLabel "Travoprost" .
+dr:C0937916 db:agonistOfTarget ge:PA290.
+dr:C0051556 rdfs:hasLabel "Amcinonide" .
+dr:C0051556 db:agonistOfTarget ge:PA181.
+dr:C0051556 db:agonistOfTarget ge:PA24823.
+dr:C0076823 rdfs:hasLabel "Atomoxetine" .
+dr:C0005740 rdfs:hasLabel "Bleomycin" .
+dr:C0005740 db:inhibitorOfTarget ge:PA30372.
+dr:C0005740 db:inhibitorOfTarget ge:PA30374.
+dr:C0008163 rdfs:hasLabel "Chlorambucil" .
+dr:C0015131 rdfs:hasLabel "Etomidate" .
+dr:C0015131 db:agonistOfTarget ge:PA28489.
+dr:C0015131 db:agonistOfTarget ge:PA36.
+dr:C0677667 rdfs:hasLabel "Raltitrexed" .
+dr:C0677667 db:inhibitorOfTarget ge:PA359.
+dr:C0677667 db:antagonistOfTarget ge:PA167.
+dr:C0047683 rdfs:hasLabel "Etonogestrel" .
+dr:C0047683 db:agonistOfTarget ge:PA266.
+dr:C0047683 db:agonistOfTarget ge:PA156.
+dr:C0026549 rdfs:hasLabel "Morphine" .
+dr:C0026549 db:agonistOfTarget ge:PA31945.
+dr:C0026549 db:agonistOfTarget ge:PA31943.
+dr:C0026549 db:agonistOfTarget ge:PA31942.
+dr:C0026549 db:substrateOfTransporter ge:PA267.
+dr:C0026549 db:inhibitorOfTransporter ge:PA267.
+dr:C0073571 rdfs:hasLabel "Ropivacaine" .
+dr:C0073571 db:inhibitorOfTarget ge:PA35000.
+dr:C0006400 rdfs:hasLabel "Bupivacaine" .
+dr:C0006400 db:inhibitorOfTarget ge:PA35000.
+dr:C0006400 db:other/unknownOfTarget ge:PA286.
+dr:C0057143 rdfs:hasLabel "Dapiprazole" .
+dr:C0057143 db:antagonistOfTarget ge:PA34.
+dr:C0057143 db:antagonistOfTarget ge:PA24597.
+dr:C0057143 db:antagonistOfTarget ge:PA33.
+dr:C0164815 rdfs:hasLabel "Penciclovir" .
+dr:C0384228 rdfs:hasLabel "Tenofovir" .
+dr:C0384228 db:substrateOfTransporter ge:PA388.
+dr:C0384228 db:substrateOfTransporter ge:PA389.
+dr:C0384228 db:substrateOfTransporter ge:PA24392.
+dr:C0384228 db:substrateOfTransporter ge:PA397.
+dr:C0384228 db:substrateOfTransporter ge:PA116.
+dr:C0016267 rdfs:hasLabel "Flucloxacillin" .
+dr:C0040613 rdfs:hasLabel "Tranexamic Acid" .
+dr:C0040613 db:inhibitorOfTarget ge:PA33405.
+dr:C1120106 rdfs:hasLabel "Ertapenem" .
+dr:C0057558 rdfs:hasLabel "Desogestrel" .
+dr:C0057558 db:agonistOfTarget ge:PA266.
+dr:C0057558 db:agonistOfTarget ge:PA156.
+dr:C0002475 rdfs:hasLabel "Mitomycin" .
+dr:C0002475 db:inhibitorOfTransporter ge:PA267.
+dr:C0301407 rdfs:hasLabel "Talbutal" .
+dr:C0301407 db:potentiatorOfTarget ge:PA28489.
+dr:C0301407 db:potentiatorOfTarget ge:PA28490.
+dr:C0301407 db:potentiatorOfTarget ge:PA28491.
+dr:C0301407 db:potentiatorOfTarget ge:PA28492.
+dr:C0301407 db:potentiatorOfTarget ge:PA28493.
+dr:C0301407 db:potentiatorOfTarget ge:PA28494.
+dr:C0301407 db:antagonistOfTarget ge:PA26490.
+dr:C0301407 db:antagonistOfTarget ge:PA114.
+dr:C0301407 db:antagonistOfTarget ge:PA28967.
+dr:C0301407 db:antagonistOfTarget ge:PA164741600.
+dr:C0765273 rdfs:hasLabel "Bexarotene" .
+dr:C0765273 db:agonistOfTarget ge:PA34890.
+dr:C0765273 db:agonistOfTarget ge:PA34891.
+dr:C0765273 db:agonistOfTarget ge:PA34892.
+dr:C0082966 rdfs:hasLabel "Ibutilide" .
+dr:C0082966 db:activatorOfTarget ge:PA83.
+dr:C0082966 db:activatorOfTarget ge:PA87.
+dr:C0082966 db:inhibitorOfTarget ge:PA212.
+dr:C0082966 db:activatorOfTarget ge:PA86.
+dr:C0082966 db:activatorOfTarget ge:PA26015.
+dr:C0082966 db:inhibitorOfTarget ge:PA219.
+dr:C0082966 db:inhibitorOfTarget ge:PA30063.
+dr:C0082966 db:inhibitorOfTarget ge:PA38722.
+dr:C0082966 db:inhibitorOfTarget ge:PA38723.
+dr:C0082966 db:inhibitorOfTarget ge:PA217.
+dr:C0042682 rdfs:hasLabel "Vindesine" .
+dr:C0042682 db:inhibitorOfTarget ge:PA38100.
+dr:C0008294 rdfs:hasLabel "Chlorthalidone" .
+dr:C0008294 db:inhibitorOfTarget ge:PA320.
+dr:C0015052 rdfs:hasLabel "Ethoxzolamide" .
+dr:C0015052 db:inhibitorOfTarget ge:PA25984.
+dr:C0015052 db:inhibitorOfTarget ge:PA25989.
+dr:C0015052 db:inhibitorOfTarget ge:PA25991.
+dr:C0015052 db:inhibitorOfTarget ge:PA25996.
+dr:C0015052 db:inhibitorOfTransporter ge:PA388.
+dr:C0030883 rdfs:hasLabel "Pentobarbital" .
+dr:C0030883 db:potentiatorOfTarget ge:PA28489.
+dr:C0030883 db:potentiatorOfTarget ge:PA28490.
+dr:C0030883 db:potentiatorOfTarget ge:PA28491.
+dr:C0030883 db:potentiatorOfTarget ge:PA28492.
+dr:C0030883 db:potentiatorOfTarget ge:PA28493.
+dr:C0030883 db:potentiatorOfTarget ge:PA28494.
+dr:C0030883 db:antagonistOfTarget ge:PA26490.
+dr:C0030883 db:antagonistOfTarget ge:PA114.
+dr:C0030883 db:antagonistOfTarget ge:PA28967.
+dr:C0030883 db:antagonistOfTarget ge:PA164741600.
+dr:C0042291 rdfs:hasLabel "Valproic Acid" .
+dr:C0042291 db:inhibitorOfTarget ge:PA38377.
+dr:C0042291 db:inhibitorOfTarget ge:PA24372.
+dr:C0042291 db:inhibitorOfTarget ge:PA24427.
+dr:C0042291 db:inhibitorOfTarget ge:PA31910.
+dr:C0042291 db:inhibitorOfTarget ge:PA24702.
+dr:C0042291 db:inhibitorOfTransporter ge:PA388.
+dr:C0042291 db:inhibitorOfTransporter ge:PA333.
+dr:C0042291 db:substrateOfTransporter ge:PA389.
+dr:C0042291 db:inhibitorOfTransporter ge:PA389.
+dr:C0042291 db:substrateOfTransporter ge:PA35813.
+dr:C0042291 db:substrateOfTransporter ge:PA35848.
+dr:C0262964 rdfs:hasLabel "Capreomycin" .
+dr:C0528166 rdfs:hasLabel "Zolmitriptan" .
+dr:C0528166 db:agonistOfTarget ge:PA29549.
+dr:C0528166 db:agonistOfTarget ge:PA29550.
+dr:C0528166 db:agonistOfTarget ge:PA29553.
+dr:C0528166 db:agonistOfT
