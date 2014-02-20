@@ -24,7 +24,7 @@ public class DrugNameToCui {
  
   public static void main(String[] args) {
 	 
-	  		String inputDrugLabel = "warfarin";
+	  		String inputDrugLabel = "clodronate";
 			
 			SimpleLuceneSearch searchInMrConso;
 			try {

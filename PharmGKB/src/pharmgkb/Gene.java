@@ -1,7 +1,16 @@
 package pharmgkb;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import org.apache.lucene.index.CorruptIndexException;
+import org.apache.lucene.queryParser.ParseException;
+import org.apache.lucene.util.ToStringUtils;
+
+import tncy.plbc.SimpleLuceneSearch;
 
 
 public class Gene {
@@ -9,17 +18,15 @@ public class Gene {
 	private String id;
 	private String gkbName;
 	private String drugName;
-	private String cui;
 	private String levelOfEvidence;
 	private List<String> clinicalAnnotationTypes;
-	private List<String> relatedDrugs;
+	private HashMap<String, String> relatedDrugs;
 	
 	public Gene (String[] line){
 		String[] temp;
 		drugName = "'sup?";
-		cui = "smth";
 		clinicalAnnotationTypes = new ArrayList<String>();
-		relatedDrugs = new ArrayList<String>();
+		relatedDrugs = new HashMap<String, String>();
 		
 		//--------- Extraction du gkbname et de l'id --------------
 		this.id = line[2].substring(line[2].indexOf("(")+1, line[2].indexOf(")"));
@@ -34,8 +41,16 @@ public class Gene {
 		
 		temp = line[11].split(";");
 		for (String var : temp) {
-			relatedDrugs.add(var);
+			relatedDrugs.put(var, findCui(var));
 		}
+	}
+	
+	private String printDrugs() {
+		String res = " [";
+		for (Map.Entry<String, String> var : relatedDrugs.entrySet()) {
+			res += var.getKey() + "   " + var.getValue()+ "   ";
+		}
+		return res + "]";
 	}
 	
 	public void setGkbName(String s){
@@ -46,10 +61,6 @@ public class Gene {
 		this.drugName = s;
 	}
 	
-	public void setCui(String s){
-		this.cui = s;
-	}
-	
 	public String getId(){
 		return id;
 	}
@@ -58,8 +69,25 @@ public class Gene {
 		return drugName;
 	}
 	
-	@Override
 	public String toString() {
-		return id +"   " + gkbName + "   "+ levelOfEvidence + "   "+ clinicalAnnotationTypes.toString() + "   "+ relatedDrugs;
+		return id +"   " + gkbName + "   "+ levelOfEvidence + "   "+ clinicalAnnotationTypes.toString() + "   "+ printDrugs() ;
+ 	}
+	
+	public String findCui(String inputDrugLabel){
+		String drugCui="error";
+		SimpleLuceneSearch searchInMrConso;
+		try {
+			searchInMrConso = new SimpleLuceneSearch("index/indexOnMesh2012");
+			drugCui=searchInMrConso.getCuidFromLabel(inputDrugLabel);
+			return (drugCui);
+			
+		} catch (CorruptIndexException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		return drugCui;
 	}
 }
