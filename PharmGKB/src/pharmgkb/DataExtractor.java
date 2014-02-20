@@ -42,14 +42,14 @@ public class DataExtractor {
 						for (String var : temp){
 							stat.incGene();
 							processedLine[2]=var;
-							last = new Gene(processedLine);
+							last = new Gene(processedLine, stat);
 							last.setGkbName(dictE.get(last.getId()));
 							last.setDrugName(dictN.get(last.getId()));
 							genes.add(last);
 						}
 					} else if (processedLine[2].length()>=1) {
 						stat.incGene();
-						last = new Gene(processedLine);
+						last = new Gene(processedLine, stat);
 						last.setGkbName(dictE.get(last.getId()));
 						last.setDrugName(dictN.get(last.getId()));
 						genes.add(last);
@@ -74,7 +74,8 @@ public class DataExtractor {
 	}
 	
 	public String getStats() {
-		return stat.getNbGenes() + "";
+		String ges = stat.getNbGenes() + "";
+		return stat.toString();
 	}
 	
 }
