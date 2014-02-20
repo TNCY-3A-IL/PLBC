@@ -53,6 +53,20 @@ public class Gene {
 		return res + "]";
 	}
 	
+	public List<String> getClinicalAnnotationTypes() {
+		return this.clinicalAnnotationTypes;
+	}
+	
+	
+	public Map<String, String> getRelatedDrugs() {
+		return this.relatedDrugs;
+	}
+	
+	
+	public String getGkbName() {
+		return this.gkbName;
+	}
+	
 	public void setGkbName(String s){
 		this.gkbName = s;
 	}

@@ -9,13 +9,17 @@ import java.util.*;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.queryParser.ParseException;
 
+import pharmgkb.DataExtractor;
 import pharmgkb.Gene;
+import pharmgkb.NameFinder;
 import tncy.plbc.SimpleLuceneSearch;
 
 public class RDFGenerator {
 	
-	List<Gene> genes;
-	Set<String> drugNames;
+	public List<Gene> genes;
+	public Set<String> drugNames;
+	public List<Triplet> triplets;
+	
 	int nbTripletDrugUMLSId = 0;
 	int nbTripletInteraction = 0;
 	int nbTripletId = 0;
@@ -24,6 +28,53 @@ public class RDFGenerator {
 		super();
 		this.genes = genes;
 		this.drugNames = new HashSet<String>();
+		
+		this.triplets = new ArrayList<Triplet>();
+		/*
+		 * 		NameFinder nf = new NameFinder("genes.tsv");
+		DataExtractor de = new DataExtractor ("clinical_ann_metadata.tsv", nf.getDictEntrez(), nf.getDictName());
+		 */
+	}
+	
+	
+	
+	public void run() {
+		
+		for (Gene gene : this.genes) {
+			
+			Triplet  triplet = null;
+			
+			
+			
+			
+			for (Map.Entry<String, String> relatedDrug : gene.getRelatedDrugs().entrySet()) {
+				String drugName = relatedDrug.getKey();
+				
+				if (!this.drugNames.contains(drugName)) {
+					this.drugNames.add(drugName);
+					
+					triplet = new DrugIdToNameTriplet(relatedDrug.getValue(), drugName);
+					this.triplets.add(triplet);
+				}
+				
+				
+				
+				
+				for (String clinicalAnnotationType : gene.getClinicalAnnotationTypes()) {
+					triplet = new DrugGeneInteractionTripet(gene.getId(), InteractionTypeFactory.getInstance(clinicalAnnotationType), relatedDrug.getValue());
+					this.triplets.add(triplet);
+				}
+			}
+
+
+			
+			
+			
+			
+			// Derniere
+			triplet = new GeneIdToNameTriplet(gene.getId(), gene.getGkbName());
+			this.triplets.add(triplet);
+		}
 	}
 	
 	public Triplet genereTripletDrugUMLSId(String drugName){
