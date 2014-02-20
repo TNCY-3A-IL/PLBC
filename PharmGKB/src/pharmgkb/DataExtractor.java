@@ -21,9 +21,11 @@ import tncy.plbc.SimpleLuceneSearch;
 public class DataExtractor {
 	
 	public List<Gene> genes;
+	public Stats stat;
 	
 	public DataExtractor(String fileName, HashMap<String, String> dictE, HashMap<String, String> dictN){
 		try {
+			stat = new Stats();
 			genes = new ArrayList<Gene> ();
 			BufferedReader br = new BufferedReader(new FileReader(fileName));
 			String line;
@@ -34,19 +36,22 @@ public class DataExtractor {
 			while ((line = br.readLine()) != null) {
 				if (!line.contains("\tOther")) {
 					processedLine= line.split("\t");
+					stat.incAnnot();
 					if (processedLine[2].contains("),")) {
 						temp = processedLine[2].split(",");
 						for (String var : temp){
+							stat.incGene();
 							processedLine[2]=var;
 							last = new Gene(processedLine);
 							last.setGkbName(dictE.get(last.getId()));
 							last.setDrugName(dictN.get(last.getId()));
-							last.setCui(findCui(last.getDrugName()));
 							genes.add(last);
 						}
 					} else if (processedLine[2].length()>=1) {
+						stat.incGene();
 						last = new Gene(processedLine);
 						last.setGkbName(dictE.get(last.getId()));
+						last.setDrugName(dictN.get(last.getId()));
 						genes.add(last);
 					}
 				}
@@ -60,7 +65,6 @@ public class DataExtractor {
 		}
 	}
 	
-	@Override
 	public String toString () {
 		String res = "";
 		for (Gene gene : genes){
@@ -69,23 +73,8 @@ public class DataExtractor {
 		return res;
 	}
 	
-	public String findCui(String inputDrugLabel){
-		String drugCui="error";
-		SimpleLuceneSearch searchInMrConso;
-		try {
-			searchInMrConso = new SimpleLuceneSearch("index/indexOnMesh2012");
-			
-			drugCui=searchInMrConso.getCuidFromLabel(inputDrugLabel);
-			
-			return (drugCui);
-			
-		} catch (CorruptIndexException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
-		return drugCui;
+	public String getStats() {
+		return stat.getNbGenes() + "";
 	}
+	
 }
