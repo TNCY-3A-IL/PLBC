@@ -1,4 +1,4 @@
-package pharmgkb;
+package pharmgkb.triplet;
 
 public class Triplet {
 	

@@ -1,4 +1,4 @@
-package pharmgkb;
+package pharmgkb.triplet;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -9,6 +9,7 @@ import java.util.*;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.queryParser.ParseException;
 
+import pharmgkb.Gene;
 import tncy.plbc.SimpleLuceneSearch;
 
 public class RDFGenerator {
