@@ -88,10 +88,10 @@ public class OMIMParser {
         String line = reader.readLine();
         Triplet diseaseProperty = new Triplet();
         Triplet hasLabel = new Triplet();
-        writer.write("@prefix <di: http://telecomnancy.eu/disease/> .\r\n");
-        writer.write("@prefix <ge: http://telecomnancy.eu/gene/> .\r\n");
-        writer.write("@prefix <omim: http://telecomnancy.eu/omim/> .\r\n");
-        writer.write("@prefix <rdfs: http://www.w3c.org/2000/01rdf-schema#> .\r\n");
+        writer.write("@prefix di: <http://telecomnancy.eu/disease/> .\r\n");
+        writer.write("@prefix ge: <http://telecomnancy.eu/gene/> .\r\n");
+        writer.write("@prefix omim: <http://telecomnancy.eu/omim/> .\r\n");
+        writer.write("@prefix rdfs: <http://www.w3c.org/2000/01rdf-schema#> .\r\n");
         String[] data;
         String tmp;
         int err = 0, total = 0;
