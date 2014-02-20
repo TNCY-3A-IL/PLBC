@@ -94,13 +94,13 @@ public class OMIMParser {
         writer.write("@prefix rdfs: <http://www.w3c.org/2000/01rdf-schema#> .\r\n");
         String[] data;
         String tmp;
-        int err = 0, total = 0;
+        int noId = 0, total = 0, unfoundId = 0;
         hasLabel.setProperty("rdfs:hasLabel");
         while (line != null) {
             tmp = getField(line, 5).split(",")[0];
             tmp = GeneSymbolToID(tmp);
             diseaseProperty.setObject("ge:" + tmp);
-            diseaseProperty.setProperty("omim:involvedInMechanismOf");
+            diseaseProperty.setProperty("omim:involvedIn");
             tmp = "";
             for (int i = 0; i < diseaseCount; i++) {
                 tmp += getField(line, diseaseColNbr + i);
@@ -110,25 +110,30 @@ public class OMIMParser {
             for (String data1 : data) {
                 try {
                     data1 = data1.replaceAll("(.*), ?([0-9]+) ?\\([0-9]+\\)", "$1;$2");
-                    total ++;
                     if(data1.split(";").length < 2){
-                        err ++;
+                        noId ++;
                         continue;
                     }
-                    id = lucene.getCuidFromMimId(data1.split(";")[1]);
+                    id = data1.split(";")[1];
+                    for(int i = 1; i < id.length(); i++){
+                        if(id.charAt(i) < '0' || id.charAt(i) > '9')
+                            id = id.substring(0, i);
+                    }
+                    id = lucene.getCuidFromMimId(id);
                     if (id != null && !id.equals("")) {
                         diseaseProperty.setSubject("di:" + id);
                         writer.write(diseaseProperty + "\r\n");
+                        total++;
                         if(diseases.add(id)){
                             hasLabel.setObject("di:" + id);
                             hasLabel.setSubject("\"" + data1.split(";")[0] + "\"");
                             writer.write(hasLabel + "\r\n");
                         }
                     }else{
-                        err ++;
+                        unfoundId ++;
                     }
                 } catch (ParseException e) {
-                    err ++;
+                    //err ++;
                 }
             }
             line = reader.readLine();
@@ -141,7 +146,11 @@ public class OMIMParser {
         }
         writer.close();
         reader.close();
-        System.out.println(err + " error(s) over " + total);
+        System.out.println("\n\n\n\n________________________________________________________");
+        System.out.println("deseases without IDs specified : " + noId);
+        System.out.println("cuid from omime fails : " + unfoundId);
+        System.out.println("involvedIn properties generated : " + total);
+        
     }
 	
 
