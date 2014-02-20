@@ -15,6 +15,7 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
 
+import Serveur.SingletonServeur;
 import plbc.SimpleLuceneSearch;
 
 public class Main {
@@ -53,11 +54,12 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		PrintWriter out = new PrintWriter("nameDrug.rdf");
+		PrintWriter out = new PrintWriter("nameDrug.ttl");
 		//ecrit les prefix
-		out.println("PREFIX dr: http://telecomnancy.eu/drug/");
-		out.println("PREFIX ge: http://telecomnancy.eu/gene/");
-		out.println("PREFIX db: http://telecomnancy.eu/db/");
+		out.println("@prefix rdfs: </http://www.w3.org/2000/01/rdf-schema#> .");
+		out.println("@prefix dr: <http://telecomnancy.eu/drug/> .");
+		out.println("@prefix ge: <http://telecomnancy.eu/gene/> .");
+		out.println("@prefix db: <http://telecomnancy.eu/db/> .");
 		
 		double nbNomNonTrouve = 0;
 		double nbNom = 0;
@@ -68,13 +70,66 @@ public class Main {
 				int nbFilsDrug = drug.getChildren().size();
 				for(int j=0;j<nbFilsDrug;j++){
 					Element nameDrug = drug.getChildren().get(j);
+					//id global du medicament etudiee
+					String idGlobalMedicament ="";
+					//balise name
 					if(nameDrug.getName().equals("name")){
 						nbNom++;
 						String drugCui=searchInMrConso.getCuidFromLabel(nameDrug.getText());
 						if(!drugCui.equals("")){
-							out.println("dr:"+drugCui+" rdf:hasLabel \""+nameDrug.getText()+"\"");
+							idGlobalMedicament =  drugCui;
+							out.println("dr:"+drugCui+" rdfs:hasLabel \""+nameDrug.getText()+"\" .");
 						}else{
 							nbNomNonTrouve++;
+						}
+					}
+					//balise target
+					if(nameDrug.getName().equals("targets")){
+						List<Element> targetsDrug = nameDrug.getChildren();//dans la balise targets
+						for(Element targetDrug : targetsDrug){
+							//actions
+							Element actionsDrug = targetDrug.getChildren().get(0);
+							//action
+							List<Element> listActionDrug = actionsDrug.getChildren();
+							for(Element actionDrug : listActionDrug){
+								String various = actionDrug.getText();
+								String idPartner = actionDrug.getAttributeValue("partner");
+								//print dans le fichier
+								out.println("dr:"+idGlobalMedicament+" db:"+various+"OfTarget ge:"+findGeneID(idPartner)+".");
+							}
+						}
+					}
+					//balise transporteur
+					if(nameDrug.getName().equals("transporters")){
+						List<Element> targetsDrug = nameDrug.getChildren();//dans la balise targets
+						for(Element targetDrug : targetsDrug){
+							//actions
+							Element actionsDrug = targetDrug.getChildren().get(0);
+							//action
+							List<Element> listActionDrug = actionsDrug.getChildren();
+							for(Element actionDrug : listActionDrug){
+								String various = actionDrug.getText();
+								String idPartner = actionDrug.getAttributeValue("partner");
+								//print dans le fichier
+								out.println("dr:"+idGlobalMedicament+" db:"+various+"OfTransporter ge:"+findGeneID(idPartner)+".");
+							}
+						}
+					}
+					//balise enzyme
+					if(nameDrug.getName().equals("enzymes")){
+						List<Element> targetsDrug = nameDrug.getChildren();//dans la balise targets
+						for(Element targetDrug : targetsDrug){
+							//actions
+							Element actionsDrug = targetDrug.getChildren().get(0);
+							//action
+							List<Element> listActionDrug = actionsDrug.getChildren();
+							for(Element actionDrug : listActionDrug){
+								String various = actionDrug.getText();
+								String idPartner = actionDrug.getAttributeValue("partner");
+								String idGene = findGeneID(idPartner);
+								//print dans le fichier
+								out.println("dr:"+idGlobalMedicament+" db:"+various+"OfEnzyme ge:"+ idGene +".");
+							}
 						}
 					}
 				}
@@ -84,6 +139,26 @@ public class Main {
 		System.out.println("nbNom : "+nbNom+", nbNomNonTrouve : "+nbNomNonTrouve);
 		double proba =(nbNom-nbNomNonTrouve)/nbNom*100;
 		System.out.println("Probabilite de nom trouve = " +proba);
+	}
+	
+	static String findGeneID(String idPartner){
+		int nbFils = racine.getChildren().size();
+		String geneIdName = "";
+		for(int i=0;i<nbFils;i++){
+			Element partner = racine.getChildren().get(i);
+			if(partner.getName().equals("partner")){
+				if(partner.getAttribute("id").equals(idPartner)){
+					List<Element> geneNames = partner.getChildren();
+					for(Element geneName : geneNames){
+						if(geneName.getName().equals("gene-name")){
+							geneIdName =geneName.getText();
+						}
+					}
+				}
+			}
+		}
+		
+		return SingletonServeur.getInstance().makeRequest(geneIdName);
 	}
 
 }
