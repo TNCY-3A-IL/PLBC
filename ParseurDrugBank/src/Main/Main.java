@@ -139,6 +139,24 @@ public class Main {
 								}
 							}
 						}
+						//balise carriers
+						if(roleDrug.getName().equals("carriers")){
+							List<Element> targetsDrug = roleDrug.getChildren();//dans la balise targets
+							for(Element targetDrug : targetsDrug){
+								//actions
+								Element actionsDrug = targetDrug.getChildren().get(0);
+								//action
+								List<Element> listActionDrug = actionsDrug.getChildren();
+								for(Element actionDrug : listActionDrug){
+									String various = actionDrug.getText();
+									String idPartner = targetDrug.getAttributeValue("partner");
+									//print dans le fichier
+									String geneId = findGeneID(idPartner);
+									if(geneId.length() != 0)
+									out.println("dr:"+idGlobalMedicament+" db:"+various+"OfCarrier ge:"+geneId+" .");
+								}
+							}
+						}
 					}
 					}
 				}
