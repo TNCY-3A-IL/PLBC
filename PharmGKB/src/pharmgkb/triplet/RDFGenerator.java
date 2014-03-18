@@ -16,9 +16,9 @@ import tncy.plbc.SimpleLuceneSearch;
 
 public class RDFGenerator {
 	
-	public List<Gene> genes;
-	public Set<String> drugNames;
-	public List<Triplet> triplets;
+	public static List<Gene> genes;
+	public static Set<String> drugNames;
+	public static List<Triplet> triplets;
 	
 	int nbTripletDrugUMLSId = 0;
 	int nbTripletInteraction = 0;
@@ -52,17 +52,23 @@ public class RDFGenerator {
 				
 				if (!this.drugNames.contains(drugName)) {
 					this.drugNames.add(drugName);
+					String cuiDrug = relatedDrug.getValue();
+					if(cuiDrug != null && !cuiDrug.trim().equals("")){
+						triplet = new DrugIdToNameTriplet(relatedDrug.getValue(), drugName);
+						this.triplets.add(triplet);
+					}
 					
-					triplet = new DrugIdToNameTriplet(relatedDrug.getValue(), drugName);
-					this.triplets.add(triplet);
 				}
 				
 				
 				
 				
 				for (String clinicalAnnotationType : gene.getClinicalAnnotationTypes()) {
-					triplet = new DrugGeneInteractionTripet(gene.getId(), InteractionTypeFactory.getInstance(clinicalAnnotationType), relatedDrug.getValue());
-					this.triplets.add(triplet);
+					String cuiDrug = relatedDrug.getValue();
+					if(cuiDrug != null && !cuiDrug.trim().equals("")){
+						triplet = new DrugGeneInteractionTripet(gene.getId(), InteractionTypeFactory.getInstance(clinicalAnnotationType), cuiDrug);
+						this.triplets.add(triplet);
+					}
 				}
 			}
 
@@ -103,18 +109,32 @@ public class RDFGenerator {
 	}
 	
 	public static void main(String[] arg){
-		genereTurtule(null, null);
+		NameFinder nf = new NameFinder("genes.tsv");
+		DataExtractor de = new DataExtractor ("clinical_ann_metadata.tsv", nf.getDictEntrez(), nf.getDictName());
+
+		
+		RDFGenerator refGen = new RDFGenerator(de.genes);
+		refGen.run();
+		genereTurtule(null);
 	}
 	
-	public static void genereTurtule(List<Triplet> list, String path){
-		File file = new File("path");
+	public static void genereTurtule(String path){
+		File file = new File("pharmgkb.ttl");
 		try {
 			
+			
 			BufferedWriter bw = new BufferedWriter(new FileWriter(file));
-			for(int i = 0; i < 600 * 10; i++){
-				bw.write("qsgzrehzhtsdhstjsftjsghhgdkdyfjhsfjyetdjsfg,jhgdk,gdyuhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"+'\n');
+			bw.write("prefix dr: <http://telecomnancy.eu/drug/>" + '\n');
+			bw.write("prefix ge: <http://telecomnancy.eu/gene/>" + '\n');
+			bw.write("prefix pgkb: <http://telecomnancy.eu/pharmgkb/>" + '\n');
+			bw.write("prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>" + '\n');
+			
+			for(Triplet trip : triplets){
+				bw.write(trip.toString() + '\n');
 			}
 			
+		
+			System.out.println("fini");
 			bw.close();
 			
 		} catch (IOException e) {
