@@ -84,6 +84,8 @@ public class ReadCVS2   {
 	                //this.bw.write("dr:" + country[1] + " ctd:" + affiche2 + " ge:" + country[3]+".");
 	                this.bw.write("dr:" + country[1] + " ctd:" + affiche3[i] + " ge:" + country[4]+".");
 	                this.bw.write("\n");
+	                
+                }
 	                this.bw.write("dr:" + country[1] + " rdfs:hasLabel " + country[0]+".");
 	                this.bw.write("\n");
 	                this.bw.write("ge:" + country[4] + " rdfs:hasLabel " + country[3]+".");
@@ -94,7 +96,6 @@ public class ReadCVS2   {
 	                //country[3] : GeneSymbol
 	                //country[4] : GeneID
 	                //country[9] : InteractionActions
-                }
             }
            
         } finally {
