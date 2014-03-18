@@ -86,9 +86,9 @@ public class ReadCVS2   {
 	                this.bw.write("\n");
 	                
                 }
-	                this.bw.write("dr:" + country[1] + " rdfs:hasLabel " + country[0]+".");
+	                this.bw.write("dr:" + country[1] + " rdfs:hasLabel \"" + country[0]+"\".");
 	                this.bw.write("\n");
-	                this.bw.write("ge:" + country[4] + " rdfs:hasLabel " + country[3]+".");
+	                this.bw.write("ge:" + country[4] + " rdfs:hasLabel \"" + country[3]+"\".");
 	                this.bw.write("\n");
 	                
 	                //country[0] : ChemicalName
@@ -172,9 +172,9 @@ public class ReadCVS2   {
 					//counterLine++;
 					this.bw.write("dr:" + country[1] + " ctd:hasIndication di:" + country[4]+".");
 	                this.bw.write("\n");
-	                this.bw.write("dr:" + country[1] + " rdfs:hasLabel " + country[0]+".");
+	                this.bw.write("dr:" + country[1] + " rdfs:hasLabel \"" + country[0]+"\".");
 	                this.bw.write("\n");
-	                this.bw.write("di:" + country[4] + " rdfs:hasLabel " + country[3]+".");
+	                this.bw.write("di:" + country[4] + " rdfs:hasLabel \"" + country[3]+"\".");
 	                this.bw.write("\n");
 	                
 	                //country[0] : ChemicalName
@@ -257,9 +257,9 @@ public class ReadCVS2   {
                 
                 this.bw.write("ge:" + country[1] + " ctd:involvedInMechanismOf di:" + country[3]+".");
                 this.bw.write("\n");
-                this.bw.write("di:" + country[3] + " rdfs:hasLabel " + country[2]+".");
+                this.bw.write("di:" + country[3] + " rdfs:hasLabel \"" + country[2]+"\".");
                 this.bw.write("\n");
-                this.bw.write("ge:" + country[1] + " rdfs:hasLabel " + country[0]+".");
+                this.bw.write("ge:" + country[1] + " rdfs:hasLabel \"" + country[0]+"\".");
                 this.bw.write("\n");
             	}
             }
