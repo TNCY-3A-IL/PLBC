@@ -12,7 +12,7 @@ WHERE {
 
   # On récupère les ?genename qui nous intéressent ...
 
-    # ... Avec les relations de ctd qui nous concerne ...
+    # ... Avec les relations de ctd qui nous concernent ...
    {
         SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> {
          
@@ -20,7 +20,7 @@ WHERE {
             ?somedrug ctd:affectsResponseToSubstance|ctd:affectsReaction ?gene.
         }
     }
-    # ... Et les relations de cgkb qui nous concerne.
+    # ... Et les relations de cgkb qui nous concernent.
     UNION {
 	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10004/pgkb/query> {
 	
@@ -39,7 +39,7 @@ WHERE {
     UNION {
         SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> {
             ?disease rdfs:hasLabel ?diseasename .
-            ?somedrug ctd:involvedInMechanismOf ?disease .
+            ?somedrug ctd:hasIndication ?disease .
         }
     }
 

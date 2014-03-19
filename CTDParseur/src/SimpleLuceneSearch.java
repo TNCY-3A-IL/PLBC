@@ -38,6 +38,7 @@ public class SimpleLuceneSearch {
 	private String INDEX;
 	private IndexSearcher SEARCHER;
 	private Analyzer ANALYSER;
+	static int counterMiss = 0;
 	
   public SimpleLuceneSearch(String index) throws CorruptIndexException, IOException {
 	    this.INDEX      =index;// "/home/coulet/workspace/data_resource/mesh/indexOnMesh";
@@ -132,7 +133,8 @@ public class SimpleLuceneSearch {
 			    Document d = SEARCHER.doc(docId);
 			    return d.get("term");
 		    }else{
-		        System.out.println("WARNING: there is no corresping term for "+cui);
+		    	counterMiss++;
+		        System.out.println("WARNING: there is no corresping term for "+cui + " counter: " + counterMiss);
 		    }
 	    }
 	    return "";
@@ -459,7 +461,8 @@ public class SimpleLuceneSearch {
 				    Document d = SEARCHER.doc(docId);
 				    return d.get("cuId");
 			    }else{
-			        System.out.println("WARNING: there is no corresping term for "+meshId);
+			    	counterMiss++;
+			        System.out.println("WARNING: there is no corresping term for "+meshId + " counter: " + counterMiss);
 			    }
 		    }
 		    return "";
