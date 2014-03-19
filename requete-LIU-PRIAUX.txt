@@ -1,0 +1,46 @@
+prefix se: <http://telecomnancy.eu/se/>
+prefix ctd: <http://telecomnancy.eu/ctd/>
+prefix omim: <http://telecomnancy.eu/omim/>
+prefix pgkb: <http://telecomnancy.eu/pgkb/>
+prefix ge: <http://telecomnancy.eu/gene/>
+prefix di: <http://telecomnancy.eu/disease/>
+prefix dr: <http://telecomnancy.eu/drug/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?diseasename ?genename
+WHERE {
+
+  # On récupère les ?genename qui nous intéressent ...
+
+    # ... Avec les relations de ctd qui nous concerne ...
+   {
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> {
+         
+            ?gene rdfs:hasLabel ?genename .
+            ?somedrug ctd:affectsResponseToSubstance|ctd:affectsReaction ?gene.
+        }
+    }
+    # ... Et les relations de cgkb qui nous concerne.
+    UNION {
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10004/pgkb/query> {
+	
+            ?gene rdfs:hasLabel ?genename .
+            ?somedrug pgkb:affectsEfficiency|pgkb:affectsDosage|pgkb:affectsToxicity ?gene.
+	}
+    }
+
+    # Jointure faite avec ?somedrug. On recupère les maladies liées.
+    {
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/sider/query> {
+            ?disease rdfs:hasLabel ?diseasename .
+            ?somedrug se:hasIndication ?disease .
+        }
+    }
+    UNION {
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> {
+            ?disease rdfs:hasLabel ?diseasename .
+            ?somedrug ctd:involvedInMechanismOf ?disease .
+        }
+    }
+
+}
