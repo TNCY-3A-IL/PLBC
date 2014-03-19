@@ -1,0 +1,102 @@
+I. contraintes de type   a∘b⊑ c
+
+II. contraintes de type   c∘a⊑ b
+
+III. contraintes de type   b∘c⊑ a
+
+?di3 se:hasIndication - |ctd:hasIndication - /groupe3  ?g3
+
+PREFIX rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#/>
+PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#/>
+PREFIX se: <http://telecomnancy.eu/sider2/>
+PREFIX ctd: <http://telecomnancy.eu/ctd/>
+SELECT ?nameDisease ?nameGene
+WHERE 
+{	
+	{
+		# On récupère tous les médicaments provoquant des effets secondaires sur une maladie
+		SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> 
+		{
+			?somedrug se:hasIndication ?disease .
+			?disease rdf:hasLabel ?nameDisease .
+		}
+                
+                SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> 
+		{
+			?somedrug ctd:hasIndication ?disease .
+			?disease rdf:hasLabel ?nameDisease .
+		}
+		
+		# On récupère tous les gènes qui sont affectés par ces médicaments
+		SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> 
+		{
+			?somedrug ctd:decreasesExpresssion|ctd:decreasesActivity|ctd:decreasesAbundance|ctd:decreasesReaction|ctd:decreasesChemicalSynthesis|ctd:increasesDegradation|ctd:increasesMetabolicProcessing|ctd:decreaseResponseToSubstance ?gene .
+			?gene rdf:hasLabel ?nameGene .
+		}
+	}
+}
+
+
+
+?di6 se:hasSideEffect - /groupe3  ?g6
+
+PREFIX rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#/>
+PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#/>
+PREFIX se: <http://telecomnancy.eu/sider2/>
+PREFIX ctd: <http://telecomnancy.eu/ctd/>
+SELECT ?nameDisease ?nameGene
+WHERE 
+{	
+	# On rÈcupËre tous les mÈdicaments provoquant des effets secondaires sur une maladie
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> 
+	{
+		?somedrug se:hasSideEffect ?disease .
+		?disease rdf:hasLabel ?nameDisease .
+	}
+	
+	# On rÈcupËre tous les gËnes qui sont affectÈs par ces mÈdicaments
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> 
+	{
+		?somedrug ctd:decreasesExpression|ctd:decreasesActivity|ctd:decreasesAbundance|ctd:decreasesReaction|ctd:decreasesChemicalSynthesis|ctd:increasesDegradation|ctd:increasesMetabolicProcessing|ctd:decreaseResponseToSubstance|ctd:affectsBinding ?gene .
+		?gene rdf:hasLabel ?nameGene .
+	}
+}
+PREFIX rdfs: <http://www.w3.org/1999/02/22-rdf-syntax-ns#/>
+PREFIX rdf: <http://www.w3.org/2000/01/rdf-schema#/>
+
+PREFIX se: <http://telecomnancy.eu/sider2/>
+PREFIX ctd: <http://telecomnancy.eu/ctd/>
+SELECT ?nameDisease ?nameGene
+
+WHERE 
+{	
+	{
+		# On récupère tous les médicaments provoquant des effets secondaires sur une maladie
+
+		SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> 
+		{
+
+			?somedrug se:hasIndication ?disease .
+			?disease rdf:hasLabel ?nameDisease .
+		}
+
+                
+                SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> 
+		{
+
+			?somedrug ctd:hasIndication ?disease .
+			?disease rdf:hasLabel ?nameDisease .
+		}
+
+		
+		# On récupère tous les gènes qui sont affectés par ces médicaments
+		SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> 
+
+		{
+			?somedrug ctd:decreasesExpresssion|ctd:decreasesActivity|ctd:decreasesAbundance|ctd:decreasesReaction|ctd:decreasesChemicalSynthesis|ctd:increasesDegradation|ctd:increasesMetabolicProcessing|ctd:decreaseResponseToSubstance ?gene .
+
+			?gene rdf:hasLabel ?nameGene .
+		}
+	}
+}
+
