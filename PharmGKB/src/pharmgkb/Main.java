@@ -14,9 +14,6 @@ public class Main {
 		
 		RDFGenerator refGen = new RDFGenerator(de.genes);
 		refGen.run();
-		
-		for (Triplet t : refGen.triplets) {
-			System.out.println(t);
-		}
+
 	}
 }
