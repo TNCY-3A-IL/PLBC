@@ -40,7 +40,7 @@ public class Parser {
 						tempCui = drugNameCui.SearchDrugId(tabLine[3]);
 					}
 						
-					outLine = tempCui + "\t" +tabLine[3]+ "\t" + tabLine[6] + "\t" + tabLine[7] +"\n";
+					outLine = tempCui + "\t" +tabLine[3]+ "\t" + tabLine[6] + "\t\"" + tabLine[7] +"\"\n";
 					writter.write(outLine);
 				}
 			}
