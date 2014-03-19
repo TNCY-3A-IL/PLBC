@@ -1,0 +1,42 @@
+freq de inhibitor : 4105
+freq de antagonist : 1247
+freq de binder : 107
+freq de agonist : 785
+freq de antibody : 22
+freq de activator : 46
+freq de other/unknown : 125
+freq de cofactor : 122
+freq de chaperone : 4
+freq de modulator : 16
+freq de inactivator : 1
+freq de inducer : 544
+freq de metabolizer : 3
+freq de multitarget : 14
+freq de substrate : 3037
+freq de other : 62
+freq de incorporation into and destabilization : 14
+freq de cleavage : 8
+freq de stimulator : 6
+freq de ligand : 24
+freq de product of : 26
+freq de component of : 1
+freq de inhibitory allosteric modulator : 1
+freq de negative modulator : 29
+freq de potentiator : 536
+freq de inverse agonist : 4
+freq de partial agonist : 44
+freq de unknown : 27
+freq de Other : 5
+freq de cross-linking/alkylation : 22
+freq de intercalation : 22
+freq de Antagonist  : 1
+freq de adduct : 21
+freq de chelator : 18
+freq de partial antagonist : 2
+freq de suppressor : 3
+freq de allosteric modulator : 22
+freq de conversion inhibitor : 1
+freq de neutralizer : 3
+freq de positive allosteric modulator : 1
+freq de inhibitor, competitive : 4
+freq de reducer : 1
