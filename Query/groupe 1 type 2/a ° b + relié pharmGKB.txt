@@ -1,0 +1,52 @@
+prefix se: <http://telecomnancy.eu/sider/>
+prefix ctd: <http://telecomnancy.eu/ctd/>
+prefix omim: <http://telecomnancy.eu/omim/>
+prefix ge: <http://telecomnancy.eu/gene/>
+prefix di: <http://telecomnancy.eu/disease/>
+prefix dr: <http://telecomnancy.eu/drug/>
+prefix rdfs: <http://www.w3c.org/2000/01/rdf-schema#>
+
+# display the couples found, and their number
+SELECT ?g2  ?d2
+WHERE{
+{
+    {
+	#OMIM
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10002/omim/query> {        
+            ?gene rdfs:hasLabel ?g2 .
+	    ?gene omim:involvedIn ?disease .
+        }
+    }
+    UNION
+    {
+	#CTD
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> {
+            ?gene rdfs:hasLabel ?g2 .
+	    ?gene ctd:involvedIn ?disease .
+        }
+    }
+}
+{
+    {
+	#CTD
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> {
+	    ?d rdfs:hasLabel ?d2 .
+	    ?d ctd:hasIndication ?disease .        
+        }
+    }
+    UNION
+    {
+	#SE
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> {
+            ?d rdfs:hasLabel ?d2 .
+	    ?d se:hasIndication ?disease .
+        }
+    }
+}
+{
+#PGKB
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10004/pgkb/query> {
+	    ?g2 ?rel ?d2
+	    FILTER regex(STR(?rel), "http://telecomnancy.eu/pharmgkb/")
+        }
+}
