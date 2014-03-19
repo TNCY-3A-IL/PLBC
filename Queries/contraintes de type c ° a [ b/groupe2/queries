@@ -1,0 +1,98 @@
+
+### let's make 4 differents queries
+### query 1 -> the couples drug, disease found by relation c then a, let's name this set A
+### query 2 -> the elements of A that valid the condition "are linked by the b1 relation"
+### query 3 -> the elements of A that valid the condition "are linked by the b2 relation"
+### query 3 -> the elements of A that valid the condition "are linked by the b1 or b2 relation"
+
+
+prefix pgkb:  <http://telecomnancy.eu/pharmgkb/>
+prefix ctd:  <http://telecomnancy.eu/ctd/>
+prefix omim:  <http://telecomnancy.eu/omin/>
+prefix se: <http://telecomnancy.eu/sider/>
+
+prefix gene: <http://telecomnancy.eu/gene/>
+prefix drug: <http://telecomnancy.eu/drug/>
+prefix disease: <http://telecomnancy.eu/disease/>
+
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?drug ?disease
+WHERE{
+
+##### this will build the A set
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10004/pgkb/query> { 	
+		?somegene  (pgkb:affectsEfficiency|pgkb:affectsToxicity) ?drug .
+	}
+}
+UNION
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> { 
+		?somegene ( ctd:affectsResponseToSubstance | ctd:affectsReaction ) ?drug .
+	}
+}
+
+
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> { 
+		?somegene ctd:involvedIn ?disease .
+	}
+}
+UNION {
+	SERVICE http://plbc2014.telecomnancy.univ-lorraine.fr:10002/omim/query { 
+		?somegene omim:involvedIn ?disease .
+	}
+}
+
+##### end of the A set
+
+
+
+###### query 2 ######
+### add the following constrait to build the second query
+SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> { 
+	?drug se:hasSideEffect ?disease .
+}
+
+
+###### query 3 ######
+### add the following constrait to build the third query
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> { 
+		?drug !se:hasIndication ?disease .
+	}
+}
+UNION
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> { 
+		?drug !ctd:hasIndication ?disease .
+	}
+}
+
+
+###### query 2 ######
+### add the following constrait to build the fourth query
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> { 
+		?drug se:hasSideEffect ?disease .
+	}
+}
+UNION
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> { 
+		?drug !se:hasIndication ?disease .
+	}
+}
+UNION
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> { 
+		?drug !ctd:hasIndication ?disease .
+	}
+}
+
+
+
+
+}

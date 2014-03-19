@@ -1,0 +1,96 @@
+
+### let's make 4 differents queries
+### query 1 -> the couples drug, disease found by relation a then b, let's name this set A
+### query 2 -> the elements of A that valid the condition "are linked by the c1 relation"
+### query 3 -> the elements of A that valid the condition "are linked by the c2 relation"
+### query 4 -> the elements of A that valid the condition "are linked by the c3 relation"
+### query 5 -> the elements of A that valid the condition "are linked by the c1 or c2 or c3 relation"
+
+prefix pgkb:  <http://telecomnancy.eu/pharmgkb/>
+prefix ctd:  <http://telecomnancy.eu/ctd/>
+prefix omim:  <http://telecomnancy.eu/omin/>
+prefix se: <http://telecomnancy.eu/se/>
+
+prefix gene: <http://telecomnancy.eu/gene/>
+prefix drug: <http://telecomnancy.eu/drug/>
+prefix disease: <http://telecomnancy.eu/disease/>
+
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?gene ?drug
+WHERE{
+
+
+##### this will build the A set
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> { 
+		?gene ctd:involvedIn ?somedisease .
+	}
+}
+UNION {
+	SERVICE http://plbc2014.telecomnancy.univ-lorraine.fr:10002/omim/query { 
+		?gene omim:involvedIn ?somedisease .
+	}
+}
+
+
+SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/se/query> { 	
+	?drug  se:hasSideEffect ?somedisease . 
+}
+
+
+
+
+###### query 2 ######
+### add the following constrait to build the second query
+#ctd
+SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> { 
+	?drug ?c ?gene .
+}
+
+
+
+###### query 3 ######
+### add the following constrait to build the third query
+#pgkb
+SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10004/pgkb/query> { 
+	?drug ?c ?gene .
+}
+
+
+
+
+###### query 4 ######
+### add the following constrait to build the fourth query
+#drubbank
+SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10005/db/query> { 
+	?drug ?c ?gene .
+}
+
+
+
+
+###### query 5 ######
+### add the following constrait to build the fifth query
+#ctd,pgkb,drubbank
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> { 
+		?drug ?c ?gene .
+	}
+}
+UNION
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10004/pgkb/query> { 
+		?drug ?c ?gene .
+	}
+}
+UNION
+{
+	SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10005/db/query> { 
+		?drug ?c ?gene .
+	}
+}
+
+
+}
