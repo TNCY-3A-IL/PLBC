@@ -1,0 +1,38 @@
+#Question : ?di1 se:hasIndication - |ctd:hasIndication - /groupe1  ?g1
+
+
+prefix se: <http://telecomnancy.eu/se/>
+prefix ctd: <http://telecomnancy.eu/ctd/>
+prefix ge: <http://telecomnancy.eu/gene/>
+prefix di: <http://telecomnancy.eu/disease/>
+prefix dr: <http://telecomnancy.eu/drug/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?diseasename ?genename
+WHERE {
+
+    {
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> {
+          
+            ?gene rdfs:hasLabel ?genename .
+            ?somedrug ctd:increasesExpression|ctd:increasesActivity|ctd:increasesAbundance|ctd:increasesReaction|ctd:increasesChemicalSynthesis|ctd:decreasesDegradation|ctd:decreasesMetabolicProcessing|ctd:increaseResponseToSubstance ?gene.
+        }
+    }
+
+
+
+    {
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10003/sider/query> {
+
+            ?disease rdfs:hasLabel ?diseasename .
+            ?somedrug se:hasIndication ?disease .
+        }
+    }
+    UNION {
+        SERVICE <http://plbc2014.telecomnancy.univ-lorraine.fr:10001/ctd/query> {
+
+            ?disease rdfs:hasLabel ?diseasename .
+            ?somedrug ctd:hasIndication ?disease .
+        }
+    }
+}
